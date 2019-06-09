@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		648FECA875747EEE3F57BB90 /* Pods_Giphy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA085825A93051D9190E1D /* Pods_Giphy.framework */; };
+		D552039C22A8F6DA00E356F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552039B22A8F6DA00E356F1 /* AppDelegate.swift */; };
+		D552039E22A8F6DA00E356F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552039D22A8F6DA00E356F1 /* ViewController.swift */; };
+		D55203A122A8F6DA00E356F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D552039F22A8F6DA00E356F1 /* Main.storyboard */; };
+		D55203A322A8F6DC00E356F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55203A222A8F6DC00E356F1 /* Assets.xcassets */; };
+		D55203A622A8F6DC00E356F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55203A422A8F6DC00E356F1 /* LaunchScreen.storyboard */; };
+		D55203BB22A8FF5000E356F1 /* GPSearchViewControllerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55203B222A8FF4F00E356F1 /* GPSearchViewControllerServiceProtocol.swift */; };
+		D55203BC22A8FF5000E356F1 /* GPSearchViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55203B422A8FF4F00E356F1 /* GPSearchViewControllerModel.swift */; };
+		D55203BD22A8FF5000E356F1 /* GPSearchViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55203B622A8FF4F00E356F1 /* GPSearchViewControllerView.swift */; };
+		D55203BE22A8FF5000E356F1 /* GPSearchViewControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55203B822A8FF4F00E356F1 /* GPSearchViewControllerService.swift */; };
+		D55203BF22A8FF5000E356F1 /* GPSearchViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55203BA22A8FF4F00E356F1 /* GPSearchViewControllerViewModel.swift */; };
+		D59098CC22AD459100839E69 /* GPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098CB22AD459100839E69 /* GPError.swift */; };
+		D59098CE22AD45B300839E69 /* GPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098CD22AD45B300839E69 /* GPLogger.swift */; };
+		D59098D022AD4A3A00839E69 /* GPSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098CF22AD4A3A00839E69 /* GPSearch.swift */; };
+		D59098D222AD4B3900839E69 /* GPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098D122AD4B3900839E69 /* GPViewController.swift */; };
+		D59098D422AD4B4800839E69 /* GPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098D322AD4B4800839E69 /* GPTableViewController.swift */; };
+		D59098D622AD4B5D00839E69 /* GPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098D522AD4B5D00839E69 /* GPTableViewCell.swift */; };
+		D59098D822AD4FF000839E69 /* GPViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098D722AD4FF000839E69 /* GPViewControllerProtocol.swift */; };
+		D59098DA22AD510400839E69 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098D922AD510400839E69 /* UIStoryboard+Extensions.swift */; };
+		D59098DD22AD5DB900839E69 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098DC22AD5DB900839E69 /* Reach.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08EA085825A93051D9190E1D /* Pods_Giphy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giphy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF6FD9B3930D386811F0253 /* Pods-Giphy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giphy.release.xcconfig"; path = "Target Support Files/Pods-Giphy/Pods-Giphy.release.xcconfig"; sourceTree = "<group>"; };
+		D552039822A8F6DA00E356F1 /* Giphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D552039B22A8F6DA00E356F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D552039D22A8F6DA00E356F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D55203A022A8F6DA00E356F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D55203A222A8F6DC00E356F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D55203A522A8F6DC00E356F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D55203A722A8F6DC00E356F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55203B222A8FF4F00E356F1 /* GPSearchViewControllerServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerServiceProtocol.swift; sourceTree = "<group>"; };
+		D55203B422A8FF4F00E356F1 /* GPSearchViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerModel.swift; sourceTree = "<group>"; };
+		D55203B622A8FF4F00E356F1 /* GPSearchViewControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerView.swift; sourceTree = "<group>"; };
+		D55203B822A8FF4F00E356F1 /* GPSearchViewControllerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerService.swift; sourceTree = "<group>"; };
+		D55203BA22A8FF4F00E356F1 /* GPSearchViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerViewModel.swift; sourceTree = "<group>"; };
+		D59098CB22AD459100839E69 /* GPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPError.swift; sourceTree = "<group>"; };
+		D59098CD22AD45B300839E69 /* GPLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPLogger.swift; sourceTree = "<group>"; };
+		D59098CF22AD4A3A00839E69 /* GPSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSearch.swift; sourceTree = "<group>"; };
+		D59098D122AD4B3900839E69 /* GPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPViewController.swift; sourceTree = "<group>"; };
+		D59098D322AD4B4800839E69 /* GPTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTableViewController.swift; sourceTree = "<group>"; };
+		D59098D522AD4B5D00839E69 /* GPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTableViewCell.swift; sourceTree = "<group>"; };
+		D59098D722AD4FF000839E69 /* GPViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPViewControllerProtocol.swift; sourceTree = "<group>"; };
+		D59098D922AD510400839E69 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
+		D59098DC22AD5DB900839E69 /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		D72EEF9A0C28692FD4A03DEF /* Pods-Giphy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giphy.debug.xcconfig"; path = "Target Support Files/Pods-Giphy/Pods-Giphy.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D552039522A8F6DA00E356F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648FECA875747EEE3F57BB90 /* Pods_Giphy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06DB0258B45C99D9A1B08DB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08EA085825A93051D9190E1D /* Pods_Giphy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54946C56341B52E1B0A52910 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D72EEF9A0C28692FD4A03DEF /* Pods-Giphy.debug.xcconfig */,
+				CFF6FD9B3930D386811F0253 /* Pods-Giphy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D552038F22A8F6DA00E356F1 = {
+			isa = PBXGroup;
+			children = (
+				D552039A22A8F6DA00E356F1 /* Giphy */,
+				D552039922A8F6DA00E356F1 /* Products */,
+				54946C56341B52E1B0A52910 /* Pods */,
+				06DB0258B45C99D9A1B08DB0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D552039922A8F6DA00E356F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D552039822A8F6DA00E356F1 /* Giphy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D552039A22A8F6DA00E356F1 /* Giphy */ = {
+			isa = PBXGroup;
+			children = (
+				D59098C622AD451200839E69 /* GPLibrary */,
+				D59098C322AD44A100839E69 /* GPCommon */,
+				D59098C222AD446300839E69 /* GPModules */,
+				D552039B22A8F6DA00E356F1 /* AppDelegate.swift */,
+				D552039D22A8F6DA00E356F1 /* ViewController.swift */,
+				D552039F22A8F6DA00E356F1 /* Main.storyboard */,
+				D55203A222A8F6DC00E356F1 /* Assets.xcassets */,
+				D55203A422A8F6DC00E356F1 /* LaunchScreen.storyboard */,
+				D55203A722A8F6DC00E356F1 /* Info.plist */,
+			);
+			path = Giphy;
+			sourceTree = "<group>";
+		};
+		D55203B022A8FF4F00E356F1 /* GPSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D55203B122A8FF4F00E356F1 /* Protocol */,
+				D55203B322A8FF4F00E356F1 /* Model */,
+				D55203B522A8FF4F00E356F1 /* View */,
+				D55203B722A8FF4F00E356F1 /* Service */,
+				D55203B922A8FF4F00E356F1 /* View Model */,
+			);
+			path = GPSearchViewController;
+			sourceTree = "<group>";
+		};
+		D55203B122A8FF4F00E356F1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D55203B222A8FF4F00E356F1 /* GPSearchViewControllerServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		D55203B322A8FF4F00E356F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D55203B422A8FF4F00E356F1 /* GPSearchViewControllerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D55203B522A8FF4F00E356F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D55203B622A8FF4F00E356F1 /* GPSearchViewControllerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D55203B722A8FF4F00E356F1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D55203B822A8FF4F00E356F1 /* GPSearchViewControllerService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D55203B922A8FF4F00E356F1 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				D55203BA22A8FF4F00E356F1 /* GPSearchViewControllerViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		D59098C222AD446300839E69 /* GPModules */ = {
+			isa = PBXGroup;
+			children = (
+				D55203B022A8FF4F00E356F1 /* GPSearchViewController */,
+			);
+			path = GPModules;
+			sourceTree = "<group>";
+		};
+		D59098C322AD44A100839E69 /* GPCommon */ = {
+			isa = PBXGroup;
+			children = (
+				D59098C522AD44C600839E69 /* Protocols */,
+				D59098C422AD44BA00839E69 /* Extensions */,
+			);
+			path = GPCommon;
+			sourceTree = "<group>";
+		};
+		D59098C422AD44BA00839E69 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D59098D922AD510400839E69 /* UIStoryboard+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D59098C522AD44C600839E69 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D59098D722AD4FF000839E69 /* GPViewControllerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D59098C622AD451200839E69 /* GPLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				D59098CA22AD454A00839E69 /* GPView */,
+				D59098C922AD453F00839E69 /* GPConnection */,
+				D59098C822AD452C00839E69 /* GPModel */,
+				D59098C722AD452000839E69 /* GPClass */,
+			);
+			path = GPLibrary;
+			sourceTree = "<group>";
+		};
+		D59098C722AD452000839E69 /* GPClass */ = {
+			isa = PBXGroup;
+			children = (
+				D59098CB22AD459100839E69 /* GPError.swift */,
+				D59098CD22AD45B300839E69 /* GPLogger.swift */,
+				D59098DC22AD5DB900839E69 /* Reach.swift */,
+			);
+			path = GPClass;
+			sourceTree = "<group>";
+		};
+		D59098C822AD452C00839E69 /* GPModel */ = {
+			isa = PBXGroup;
+			children = (
+				D59098CF22AD4A3A00839E69 /* GPSearch.swift */,
+			);
+			path = GPModel;
+			sourceTree = "<group>";
+		};
+		D59098C922AD453F00839E69 /* GPConnection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GPConnection;
+			sourceTree = "<group>";
+		};
+		D59098CA22AD454A00839E69 /* GPView */ = {
+			isa = PBXGroup;
+			children = (
+				D59098D122AD4B3900839E69 /* GPViewController.swift */,
+				D59098D322AD4B4800839E69 /* GPTableViewController.swift */,
+				D59098D522AD4B5D00839E69 /* GPTableViewCell.swift */,
+			);
+			path = GPView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D552039722A8F6DA00E356F1 /* Giphy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D55203AA22A8F6DD00E356F1 /* Build configuration list for PBXNativeTarget "Giphy" */;
+			buildPhases = (
+				619002AD06F9BE29B1256DC4 /* [CP] Check Pods Manifest.lock */,
+				D552039422A8F6DA00E356F1 /* Sources */,
+				D552039522A8F6DA00E356F1 /* Frameworks */,
+				D552039622A8F6DA00E356F1 /* Resources */,
+				FE838C4B3BDBA8B21F30EC98 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Giphy;
+			productName = Giphy;
+			productReference = D552039822A8F6DA00E356F1 /* Giphy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D552039022A8F6DA00E356F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Celerstudio;
+				TargetAttributes = {
+					D552039722A8F6DA00E356F1 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = D552039322A8F6DA00E356F1 /* Build configuration list for PBXProject "Giphy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D552038F22A8F6DA00E356F1;
+			productRefGroup = D552039922A8F6DA00E356F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D552039722A8F6DA00E356F1 /* Giphy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D552039622A8F6DA00E356F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55203A622A8F6DC00E356F1 /* LaunchScreen.storyboard in Resources */,
+				D55203A322A8F6DC00E356F1 /* Assets.xcassets in Resources */,
+				D55203A122A8F6DA00E356F1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		619002AD06F9BE29B1256DC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Giphy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE838C4B3BDBA8B21F30EC98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Giphy/Pods-Giphy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GiphyCoreSDK/GiphyCoreSDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GiphyCoreSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Giphy/Pods-Giphy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D552039422A8F6DA00E356F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55203BD22A8FF5000E356F1 /* GPSearchViewControllerView.swift in Sources */,
+				D59098CC22AD459100839E69 /* GPError.swift in Sources */,
+				D552039E22A8F6DA00E356F1 /* ViewController.swift in Sources */,
+				D55203BB22A8FF5000E356F1 /* GPSearchViewControllerServiceProtocol.swift in Sources */,
+				D552039C22A8F6DA00E356F1 /* AppDelegate.swift in Sources */,
+				D59098D222AD4B3900839E69 /* GPViewController.swift in Sources */,
+				D59098CE22AD45B300839E69 /* GPLogger.swift in Sources */,
+				D55203BC22A8FF5000E356F1 /* GPSearchViewControllerModel.swift in Sources */,
+				D59098D422AD4B4800839E69 /* GPTableViewController.swift in Sources */,
+				D59098DD22AD5DB900839E69 /* Reach.swift in Sources */,
+				D59098D822AD4FF000839E69 /* GPViewControllerProtocol.swift in Sources */,
+				D55203BE22A8FF5000E356F1 /* GPSearchViewControllerService.swift in Sources */,
+				D59098D022AD4A3A00839E69 /* GPSearch.swift in Sources */,
+				D59098DA22AD510400839E69 /* UIStoryboard+Extensions.swift in Sources */,
+				D59098D622AD4B5D00839E69 /* GPTableViewCell.swift in Sources */,
+				D55203BF22A8FF5000E356F1 /* GPSearchViewControllerViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D552039F22A8F6DA00E356F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55203A022A8F6DA00E356F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D55203A422A8F6DC00E356F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55203A522A8F6DC00E356F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D55203A822A8F6DD00E356F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D55203A922A8F6DD00E356F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D55203AB22A8F6DD00E356F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D72EEF9A0C28692FD4A03DEF /* Pods-Giphy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 495XWEJ924;
+				INFOPLIST_FILE = Giphy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.celerstudio.Giphy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D55203AC22A8F6DD00E356F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFF6FD9B3930D386811F0253 /* Pods-Giphy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 495XWEJ924;
+				INFOPLIST_FILE = Giphy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.celerstudio.Giphy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D552039322A8F6DA00E356F1 /* Build configuration list for PBXProject "Giphy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55203A822A8F6DD00E356F1 /* Debug */,
+				D55203A922A8F6DD00E356F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D55203AA22A8F6DD00E356F1 /* Build configuration list for PBXNativeTarget "Giphy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55203AB22A8F6DD00E356F1 /* Debug */,
+				D55203AC22A8F6DD00E356F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D552039022A8F6DA00E356F1 /* Project object */;
+}

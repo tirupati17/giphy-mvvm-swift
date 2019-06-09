@@ -1,0 +1,713 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02E1F66439AB5ED5645382CF3A6B81FD /* GPHChannelTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C51DEAB57E6FABFD8FCCA350098CD2 /* GPHChannelTag.swift */; };
+		06830105818253A0CD06F1C73FD5E627 /* GPHImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014C22CBF25888535FC54AF7AADC236 /* GPHImages.swift */; };
+		256D11F3991BFEA4A1C0C34B65471356 /* GPHAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E02F0F170482D4F7D91B47581DE75B1 /* GPHAsyncOperation.swift */; };
+		3442FC3264FE2BBD92E81FC681480207 /* GPHCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C60F639C084167116AC8CA4E35D9D /* GPHCategory.swift */; };
+		352BC0C775634F27C44AC9136E80DE44 /* GiphyCoreSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F4037012BAE66DFD3BB0D788793BEBF /* GiphyCoreSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		391669D6AE9BB24CA3B121D48BAC643E /* GPHAbstractClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CD3C2FE8457E4BFAAF871FCDDC24E /* GPHAbstractClient.swift */; };
+		4090B97E7FD10C05EE77075C5CC71639 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		4333FADCD2FC15DD3F7EBAC63C32D29B /* GiphyCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DCD490F8AC95C79081505B661E4DF /* GiphyCore.swift */; };
+		4C85C50CF6519722C570B695A015FAE3 /* GPHError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D4D48B5FEB99F1B1D02D0FF4AEA488 /* GPHError.swift */; };
+		4DDBF34AB221184226A3D940BE548F48 /* GPHMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F4BB8803CCDD4A9BA83008D2A99F9A /* GPHMedia.swift */; };
+		4F7E7C0ACD08B26F593E6B758B8F68BC /* GPHMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00971B34BAB7505A039599E89B163965 /* GPHMappable.swift */; };
+		5795B8208838E131BA60F006C7E216F6 /* GPHNetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EB778E9C18E17A52E28D5A249667D /* GPHNetworkReachability.swift */; };
+		61065A6BA908B79F7E6AA1EBE7725FDF /* GPHMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989E33A63C1BE0CCD90144EC2C56B3A /* GPHMeta.swift */; };
+		6A81DB827D861771379EAF9D97F795A1 /* GPHListMediaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F15FEEE94EB47BD8FABD0DF68C3EA0F /* GPHListMediaResponse.swift */; };
+		6DABC6043F4A0F6BF8463A68E2045609 /* GPHClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D906AF06BFEB43F239B4998680DE73 /* GPHClient.swift */; };
+		72F98458F8BA5ADF4956D98FCF4D2942 /* GPHListTermSuggestionRespose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35FD4D684302D7D3840654DCEFA1B3 /* GPHListTermSuggestionRespose.swift */; };
+		7409FB505504E2C9401684A703146E4B /* Pods-Giphy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC5E6FA4B7A118FC8E2FF1A20178B06 /* Pods-Giphy-dummy.m */; };
+		8504EAC0DD8A203B99B3C718569BC5AA /* Pods-Giphy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D108A83BD0841F8AE84912D435849BE8 /* Pods-Giphy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85D821CBFBA3D8C1FD90B9F565E6BD2F /* GPHFilterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBC5A8F9FD820537EF0BA48BB1AE77 /* GPHFilterable.swift */; };
+		8D9789C1B21F8573EB74041C0DF4BF53 /* GPHRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AD74727BCF7DD7432C8D008E63FFB7 /* GPHRequest.swift */; };
+		90B2E28B7A2767E0D75989148927AF32 /* GPHTermSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC7F054A34FA8A273FB9079C87FC91F /* GPHTermSuggestion.swift */; };
+		95447019B4EAE54F6FA2F0ADC91B4EAC /* GPHImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044D04D7BC88122599B2AD99E52E166 /* GPHImage.swift */; };
+		970C5D885F1EE8AB261456C36B2E8AD7 /* GPHMediaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7600D9297F2F1D4E68E14C9C1E12439F /* GPHMediaResponse.swift */; };
+		9715D7DBE9C1F15C65FCB1BC04CD29FE /* GPHChannelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C41942BAE5F935D2C471E766413CEB /* GPHChannelResponse.swift */; };
+		A075CB2BE84441C91A0394D71D0243BF /* GPHResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D89E1B042EE89F930C3E2954BB64E1 /* GPHResponse.swift */; };
+		A775C108649BC4366CB96288C0F8CAFC /* GPHTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E33EE082A042C9600BDA6B6CE77EE /* GPHTypes.swift */; };
+		B21FB5D9F795CCF40E8BF087D9F73EE5 /* GPHBottleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE6DF463384DCEC4ACC75F57B3E8B9 /* GPHBottleData.swift */; };
+		B9FD2448E0F29E7CCC093DC19818B1DF /* GPHRequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AFDAB51594A66CEF3BD2463854B9FB /* GPHRequestConfig.swift */; };
+		D215B6C8BCF9589E787EF8DB664B0F5B /* GPHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D78EF15F71F3885041F0962CA0630C /* GPHUser.swift */; };
+		D36CD9649347CF7F8204C68665DAFD38 /* GPHListChannelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7C9B84455BB705ADD5C71AD2A44582 /* GPHListChannelResponse.swift */; };
+		D5E9E0D2465DC6B0D4F742DEAAE29BDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		D84F7915D0D0A786E6FE4C07DD9BD339 /* GPHChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69DDA69A34B1621C8F26BFBBF6DB59 /* GPHChannel.swift */; };
+		EB6167F400E01AD9B7B03E84AE1DF948 /* GiphyCoreSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C43E640A78DAD43A874A1665DB47F3 /* GiphyCoreSDK-dummy.m */; };
+		F8FF8D2F8FB0ADD90BB0305F6FB4B8CC /* GPHPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7290B99DAD966B53E480209B2A29BE8E /* GPHPagination.swift */; };
+		FF99EF39206250F86E95D829C5C4EDCE /* GPHListCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6AF3B9D307BEBAC74C53FA36A7C722 /* GPHListCategoryResponse.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDCFC36DBA4BA9ECC4C601B5F509C533 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEFE3EC27462AE472983887E1849E679;
+			remoteInfo = GiphyCoreSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00971B34BAB7505A039599E89B163965 /* GPHMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHMappable.swift; path = Sources/GPHMappable.swift; sourceTree = "<group>"; };
+		06C6ED6CBE281FA6E70C318CCA9AA06F /* Pods-Giphy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Giphy-frameworks.sh"; sourceTree = "<group>"; };
+		22DBC5A8F9FD820537EF0BA48BB1AE77 /* GPHFilterable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHFilterable.swift; path = Sources/GPHFilterable.swift; sourceTree = "<group>"; };
+		27C41942BAE5F935D2C471E766413CEB /* GPHChannelResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHChannelResponse.swift; path = Sources/GPHChannelResponse.swift; sourceTree = "<group>"; };
+		28D906AF06BFEB43F239B4998680DE73 /* GPHClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHClient.swift; path = Sources/GPHClient.swift; sourceTree = "<group>"; };
+		31D89E1B042EE89F930C3E2954BB64E1 /* GPHResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHResponse.swift; path = Sources/GPHResponse.swift; sourceTree = "<group>"; };
+		3564D5D2582BF006AA5F1D4388020D88 /* GiphyCoreSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GiphyCoreSDK.xcconfig; sourceTree = "<group>"; };
+		3E02F0F170482D4F7D91B47581DE75B1 /* GPHAsyncOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHAsyncOperation.swift; path = Sources/GPHAsyncOperation.swift; sourceTree = "<group>"; };
+		418CD3C2FE8457E4BFAAF871FCDDC24E /* GPHAbstractClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHAbstractClient.swift; path = Sources/GPHAbstractClient.swift; sourceTree = "<group>"; };
+		47D4D48B5FEB99F1B1D02D0FF4AEA488 /* GPHError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHError.swift; path = Sources/GPHError.swift; sourceTree = "<group>"; };
+		52486FDD22F349521C87D356DB17D5B9 /* Pods-Giphy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Giphy.release.xcconfig"; sourceTree = "<group>"; };
+		5396ED4CCE0EA4B22D4BC91DFCE1746B /* GiphyCoreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GiphyCoreSDK.framework; path = GiphyCoreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E7EB778E9C18E17A52E28D5A249667D /* GPHNetworkReachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHNetworkReachability.swift; path = Sources/GPHNetworkReachability.swift; sourceTree = "<group>"; };
+		6DC5E6FA4B7A118FC8E2FF1A20178B06 /* Pods-Giphy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Giphy-dummy.m"; sourceTree = "<group>"; };
+		6E35FD4D684302D7D3840654DCEFA1B3 /* GPHListTermSuggestionRespose.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHListTermSuggestionRespose.swift; path = Sources/GPHListTermSuggestionRespose.swift; sourceTree = "<group>"; };
+		6F6AF3B9D307BEBAC74C53FA36A7C722 /* GPHListCategoryResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHListCategoryResponse.swift; path = Sources/GPHListCategoryResponse.swift; sourceTree = "<group>"; };
+		6FFE6DF463384DCEC4ACC75F57B3E8B9 /* GPHBottleData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHBottleData.swift; path = Sources/GPHBottleData.swift; sourceTree = "<group>"; };
+		7290B99DAD966B53E480209B2A29BE8E /* GPHPagination.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHPagination.swift; path = Sources/GPHPagination.swift; sourceTree = "<group>"; };
+		7600D9297F2F1D4E68E14C9C1E12439F /* GPHMediaResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHMediaResponse.swift; path = Sources/GPHMediaResponse.swift; sourceTree = "<group>"; };
+		76D78EF15F71F3885041F0962CA0630C /* GPHUser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHUser.swift; path = Sources/GPHUser.swift; sourceTree = "<group>"; };
+		77C51DEAB57E6FABFD8FCCA350098CD2 /* GPHChannelTag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHChannelTag.swift; path = Sources/GPHChannelTag.swift; sourceTree = "<group>"; };
+		7F15FEEE94EB47BD8FABD0DF68C3EA0F /* GPHListMediaResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHListMediaResponse.swift; path = Sources/GPHListMediaResponse.swift; sourceTree = "<group>"; };
+		7F4037012BAE66DFD3BB0D788793BEBF /* GiphyCoreSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GiphyCoreSDK-umbrella.h"; sourceTree = "<group>"; };
+		81F4BB8803CCDD4A9BA83008D2A99F9A /* GPHMedia.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHMedia.swift; path = Sources/GPHMedia.swift; sourceTree = "<group>"; };
+		8B6DCD490F8AC95C79081505B661E4DF /* GiphyCore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GiphyCore.swift; path = Sources/GiphyCore.swift; sourceTree = "<group>"; };
+		95C43E640A78DAD43A874A1665DB47F3 /* GiphyCoreSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GiphyCoreSDK-dummy.m"; sourceTree = "<group>"; };
+		9C69DDA69A34B1621C8F26BFBBF6DB59 /* GPHChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHChannel.swift; path = Sources/GPHChannel.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EC7F054A34FA8A273FB9079C87FC91F /* GPHTermSuggestion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHTermSuggestion.swift; path = Sources/GPHTermSuggestion.swift; sourceTree = "<group>"; };
+		A2F9662EC7759D323CBC9305DAAC2B23 /* Pods-Giphy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Giphy-acknowledgements.plist"; sourceTree = "<group>"; };
+		BBA6BDCD22967E086AB1EC8C011CFCBA /* GiphyCoreSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GiphyCoreSDK.modulemap; sourceTree = "<group>"; };
+		C6F932CC278BA05228367ED8C305823B /* Pods-Giphy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Giphy-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C782125DAEE78628D892C5340569F26B /* Pods-Giphy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Giphy-Info.plist"; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CB7C9B84455BB705ADD5C71AD2A44582 /* GPHListChannelResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHListChannelResponse.swift; path = Sources/GPHListChannelResponse.swift; sourceTree = "<group>"; };
+		D014C22CBF25888535FC54AF7AADC236 /* GPHImages.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHImages.swift; path = Sources/GPHImages.swift; sourceTree = "<group>"; };
+		D108A83BD0841F8AE84912D435849BE8 /* Pods-Giphy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Giphy-umbrella.h"; sourceTree = "<group>"; };
+		D17C60F639C084167116AC8CA4E35D9D /* GPHCategory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHCategory.swift; path = Sources/GPHCategory.swift; sourceTree = "<group>"; };
+		D6232DCFD0C06E347682FAC74753A710 /* Pods-Giphy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Giphy.debug.xcconfig"; sourceTree = "<group>"; };
+		D7AD74727BCF7DD7432C8D008E63FFB7 /* GPHRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHRequest.swift; path = Sources/GPHRequest.swift; sourceTree = "<group>"; };
+		D94422A31963F621593DA79F39CB2A9F /* GiphyCoreSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GiphyCoreSDK-prefix.pch"; sourceTree = "<group>"; };
+		D989E33A63C1BE0CCD90144EC2C56B3A /* GPHMeta.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHMeta.swift; path = Sources/GPHMeta.swift; sourceTree = "<group>"; };
+		E24E33EE082A042C9600BDA6B6CE77EE /* GPHTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHTypes.swift; path = Sources/GPHTypes.swift; sourceTree = "<group>"; };
+		EEF77FC6A5BCCC5E63D6E7A60DB0A166 /* Pods-Giphy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Giphy.modulemap"; sourceTree = "<group>"; };
+		F044D04D7BC88122599B2AD99E52E166 /* GPHImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHImage.swift; path = Sources/GPHImage.swift; sourceTree = "<group>"; };
+		F8AFDAB51594A66CEF3BD2463854B9FB /* GPHRequestConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHRequestConfig.swift; path = Sources/GPHRequestConfig.swift; sourceTree = "<group>"; };
+		FA6B54270A4BA43C655F00D6624A9D1F /* Pods_Giphy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Giphy.framework; path = "Pods-Giphy.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD2E3F2B9C0F5F7D03DA602FBDB49C52 /* GiphyCoreSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GiphyCoreSDK-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		234D476DC60AFD725B1D1113AE3B71BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4090B97E7FD10C05EE77075C5CC71639 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D34C20DF22DC4D46C414BEDA4F19B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5E9E0D2465DC6B0D4F742DEAAE29BDA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3869459109B3003F3EF2516732BACA8D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4FAE60A06D3E62943E3296F2B4B02B9 /* Pods-Giphy */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		39D1415B0FFD2942E483D2F018F1E9BB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBA6BDCD22967E086AB1EC8C011CFCBA /* GiphyCoreSDK.modulemap */,
+				3564D5D2582BF006AA5F1D4388020D88 /* GiphyCoreSDK.xcconfig */,
+				95C43E640A78DAD43A874A1665DB47F3 /* GiphyCoreSDK-dummy.m */,
+				FD2E3F2B9C0F5F7D03DA602FBDB49C52 /* GiphyCoreSDK-Info.plist */,
+				D94422A31963F621593DA79F39CB2A9F /* GiphyCoreSDK-prefix.pch */,
+				7F4037012BAE66DFD3BB0D788793BEBF /* GiphyCoreSDK-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GiphyCoreSDK";
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A5B0063952B9FF870AEC72700F47CA58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5396ED4CCE0EA4B22D4BC91DFCE1746B /* GiphyCoreSDK.framework */,
+				FA6B54270A4BA43C655F00D6624A9D1F /* Pods_Giphy.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC9EE9B839DB3C2CD70AA430E992FBDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F65F9CA6A870F9EC368EDF2BDBE5A1D2 /* GiphyCoreSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				CC9EE9B839DB3C2CD70AA430E992FBDC /* Pods */,
+				A5B0063952B9FF870AEC72700F47CA58 /* Products */,
+				3869459109B3003F3EF2516732BACA8D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4FAE60A06D3E62943E3296F2B4B02B9 /* Pods-Giphy */ = {
+			isa = PBXGroup;
+			children = (
+				EEF77FC6A5BCCC5E63D6E7A60DB0A166 /* Pods-Giphy.modulemap */,
+				C6F932CC278BA05228367ED8C305823B /* Pods-Giphy-acknowledgements.markdown */,
+				A2F9662EC7759D323CBC9305DAAC2B23 /* Pods-Giphy-acknowledgements.plist */,
+				6DC5E6FA4B7A118FC8E2FF1A20178B06 /* Pods-Giphy-dummy.m */,
+				06C6ED6CBE281FA6E70C318CCA9AA06F /* Pods-Giphy-frameworks.sh */,
+				C782125DAEE78628D892C5340569F26B /* Pods-Giphy-Info.plist */,
+				D108A83BD0841F8AE84912D435849BE8 /* Pods-Giphy-umbrella.h */,
+				D6232DCFD0C06E347682FAC74753A710 /* Pods-Giphy.debug.xcconfig */,
+				52486FDD22F349521C87D356DB17D5B9 /* Pods-Giphy.release.xcconfig */,
+			);
+			name = "Pods-Giphy";
+			path = "Target Support Files/Pods-Giphy";
+			sourceTree = "<group>";
+		};
+		F65F9CA6A870F9EC368EDF2BDBE5A1D2 /* GiphyCoreSDK */ = {
+			isa = PBXGroup;
+			children = (
+				8B6DCD490F8AC95C79081505B661E4DF /* GiphyCore.swift */,
+				418CD3C2FE8457E4BFAAF871FCDDC24E /* GPHAbstractClient.swift */,
+				3E02F0F170482D4F7D91B47581DE75B1 /* GPHAsyncOperation.swift */,
+				6FFE6DF463384DCEC4ACC75F57B3E8B9 /* GPHBottleData.swift */,
+				D17C60F639C084167116AC8CA4E35D9D /* GPHCategory.swift */,
+				9C69DDA69A34B1621C8F26BFBBF6DB59 /* GPHChannel.swift */,
+				27C41942BAE5F935D2C471E766413CEB /* GPHChannelResponse.swift */,
+				77C51DEAB57E6FABFD8FCCA350098CD2 /* GPHChannelTag.swift */,
+				28D906AF06BFEB43F239B4998680DE73 /* GPHClient.swift */,
+				47D4D48B5FEB99F1B1D02D0FF4AEA488 /* GPHError.swift */,
+				22DBC5A8F9FD820537EF0BA48BB1AE77 /* GPHFilterable.swift */,
+				F044D04D7BC88122599B2AD99E52E166 /* GPHImage.swift */,
+				D014C22CBF25888535FC54AF7AADC236 /* GPHImages.swift */,
+				6F6AF3B9D307BEBAC74C53FA36A7C722 /* GPHListCategoryResponse.swift */,
+				CB7C9B84455BB705ADD5C71AD2A44582 /* GPHListChannelResponse.swift */,
+				7F15FEEE94EB47BD8FABD0DF68C3EA0F /* GPHListMediaResponse.swift */,
+				6E35FD4D684302D7D3840654DCEFA1B3 /* GPHListTermSuggestionRespose.swift */,
+				00971B34BAB7505A039599E89B163965 /* GPHMappable.swift */,
+				81F4BB8803CCDD4A9BA83008D2A99F9A /* GPHMedia.swift */,
+				7600D9297F2F1D4E68E14C9C1E12439F /* GPHMediaResponse.swift */,
+				D989E33A63C1BE0CCD90144EC2C56B3A /* GPHMeta.swift */,
+				5E7EB778E9C18E17A52E28D5A249667D /* GPHNetworkReachability.swift */,
+				7290B99DAD966B53E480209B2A29BE8E /* GPHPagination.swift */,
+				D7AD74727BCF7DD7432C8D008E63FFB7 /* GPHRequest.swift */,
+				F8AFDAB51594A66CEF3BD2463854B9FB /* GPHRequestConfig.swift */,
+				31D89E1B042EE89F930C3E2954BB64E1 /* GPHResponse.swift */,
+				9EC7F054A34FA8A273FB9079C87FC91F /* GPHTermSuggestion.swift */,
+				E24E33EE082A042C9600BDA6B6CE77EE /* GPHTypes.swift */,
+				76D78EF15F71F3885041F0962CA0630C /* GPHUser.swift */,
+				39D1415B0FFD2942E483D2F018F1E9BB /* Support Files */,
+			);
+			name = GiphyCoreSDK;
+			path = GiphyCoreSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		607BE6DCB303CCB6C409101C412DFED7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				352BC0C775634F27C44AC9136E80DE44 /* GiphyCoreSDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCE6429A5099864B3C06734426780B72 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8504EAC0DD8A203B99B3C718569BC5AA /* Pods-Giphy-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5A784BD49DD36052CC2C2D3B3F2D35EA /* Pods-Giphy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 261D7C9093F130604BEB057698FD0816 /* Build configuration list for PBXNativeTarget "Pods-Giphy" */;
+			buildPhases = (
+				DCE6429A5099864B3C06734426780B72 /* Headers */,
+				6A88A500BCA889D9A02FBA3A9791EB07 /* Sources */,
+				63D34C20DF22DC4D46C414BEDA4F19B0 /* Frameworks */,
+				5603962A52E34CD0BC123AA0419EA1CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD46F11AC4192CA9D67EADBA09FCA607 /* PBXTargetDependency */,
+			);
+			name = "Pods-Giphy";
+			productName = "Pods-Giphy";
+			productReference = FA6B54270A4BA43C655F00D6624A9D1F /* Pods_Giphy.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CEFE3EC27462AE472983887E1849E679 /* GiphyCoreSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72EB1178A72C1A516AAA73EB83A031FC /* Build configuration list for PBXNativeTarget "GiphyCoreSDK" */;
+			buildPhases = (
+				607BE6DCB303CCB6C409101C412DFED7 /* Headers */,
+				3C1A15AD4629B3AAE597251173D98D1E /* Sources */,
+				234D476DC60AFD725B1D1113AE3B71BE /* Frameworks */,
+				94F64ACD4456554154AA70BB02E2F7F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GiphyCoreSDK;
+			productName = GiphyCoreSDK;
+			productReference = 5396ED4CCE0EA4B22D4BC91DFCE1746B /* GiphyCoreSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = A5B0063952B9FF870AEC72700F47CA58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEFE3EC27462AE472983887E1849E679 /* GiphyCoreSDK */,
+				5A784BD49DD36052CC2C2D3B3F2D35EA /* Pods-Giphy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5603962A52E34CD0BC123AA0419EA1CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94F64ACD4456554154AA70BB02E2F7F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C1A15AD4629B3AAE597251173D98D1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4333FADCD2FC15DD3F7EBAC63C32D29B /* GiphyCore.swift in Sources */,
+				EB6167F400E01AD9B7B03E84AE1DF948 /* GiphyCoreSDK-dummy.m in Sources */,
+				391669D6AE9BB24CA3B121D48BAC643E /* GPHAbstractClient.swift in Sources */,
+				256D11F3991BFEA4A1C0C34B65471356 /* GPHAsyncOperation.swift in Sources */,
+				B21FB5D9F795CCF40E8BF087D9F73EE5 /* GPHBottleData.swift in Sources */,
+				3442FC3264FE2BBD92E81FC681480207 /* GPHCategory.swift in Sources */,
+				D84F7915D0D0A786E6FE4C07DD9BD339 /* GPHChannel.swift in Sources */,
+				9715D7DBE9C1F15C65FCB1BC04CD29FE /* GPHChannelResponse.swift in Sources */,
+				02E1F66439AB5ED5645382CF3A6B81FD /* GPHChannelTag.swift in Sources */,
+				6DABC6043F4A0F6BF8463A68E2045609 /* GPHClient.swift in Sources */,
+				4C85C50CF6519722C570B695A015FAE3 /* GPHError.swift in Sources */,
+				85D821CBFBA3D8C1FD90B9F565E6BD2F /* GPHFilterable.swift in Sources */,
+				95447019B4EAE54F6FA2F0ADC91B4EAC /* GPHImage.swift in Sources */,
+				06830105818253A0CD06F1C73FD5E627 /* GPHImages.swift in Sources */,
+				FF99EF39206250F86E95D829C5C4EDCE /* GPHListCategoryResponse.swift in Sources */,
+				D36CD9649347CF7F8204C68665DAFD38 /* GPHListChannelResponse.swift in Sources */,
+				6A81DB827D861771379EAF9D97F795A1 /* GPHListMediaResponse.swift in Sources */,
+				72F98458F8BA5ADF4956D98FCF4D2942 /* GPHListTermSuggestionRespose.swift in Sources */,
+				4F7E7C0ACD08B26F593E6B758B8F68BC /* GPHMappable.swift in Sources */,
+				4DDBF34AB221184226A3D940BE548F48 /* GPHMedia.swift in Sources */,
+				970C5D885F1EE8AB261456C36B2E8AD7 /* GPHMediaResponse.swift in Sources */,
+				61065A6BA908B79F7E6AA1EBE7725FDF /* GPHMeta.swift in Sources */,
+				5795B8208838E131BA60F006C7E216F6 /* GPHNetworkReachability.swift in Sources */,
+				F8FF8D2F8FB0ADD90BB0305F6FB4B8CC /* GPHPagination.swift in Sources */,
+				8D9789C1B21F8573EB74041C0DF4BF53 /* GPHRequest.swift in Sources */,
+				B9FD2448E0F29E7CCC093DC19818B1DF /* GPHRequestConfig.swift in Sources */,
+				A075CB2BE84441C91A0394D71D0243BF /* GPHResponse.swift in Sources */,
+				90B2E28B7A2767E0D75989148927AF32 /* GPHTermSuggestion.swift in Sources */,
+				A775C108649BC4366CB96288C0F8CAFC /* GPHTypes.swift in Sources */,
+				D215B6C8BCF9589E787EF8DB664B0F5B /* GPHUser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A88A500BCA889D9A02FBA3A9791EB07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7409FB505504E2C9401684A703146E4B /* Pods-Giphy-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD46F11AC4192CA9D67EADBA09FCA607 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GiphyCoreSDK;
+			target = CEFE3EC27462AE472983887E1849E679 /* GiphyCoreSDK */;
+			targetProxy = CDCFC36DBA4BA9ECC4C601B5F509C533 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07488D4657FB0A78086563621D425F8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4CB512CEE6C89F8E802CD34943012BE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52486FDD22F349521C87D356DB17D5B9 /* Pods-Giphy.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Giphy/Pods-Giphy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Giphy/Pods-Giphy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5264A6D667F308604D7599F528A5056F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6232DCFD0C06E347682FAC74753A710 /* Pods-Giphy.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Giphy/Pods-Giphy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Giphy/Pods-Giphy.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		65D93D107FA0E7B0CBD3FC8633F33F3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3564D5D2582BF006AA5F1D4388020D88 /* GiphyCoreSDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GiphyCoreSDK/GiphyCoreSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GiphyCoreSDK/GiphyCoreSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GiphyCoreSDK/GiphyCoreSDK.modulemap";
+				PRODUCT_MODULE_NAME = GiphyCoreSDK;
+				PRODUCT_NAME = GiphyCoreSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A0F0D792FFFD81CE6C2D6F2420E1BE3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3564D5D2582BF006AA5F1D4388020D88 /* GiphyCoreSDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GiphyCoreSDK/GiphyCoreSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GiphyCoreSDK/GiphyCoreSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GiphyCoreSDK/GiphyCoreSDK.modulemap";
+				PRODUCT_MODULE_NAME = GiphyCoreSDK;
+				PRODUCT_NAME = GiphyCoreSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A1962E6FF39BBAC201A2E5DDF99557DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		261D7C9093F130604BEB057698FD0816 /* Build configuration list for PBXNativeTarget "Pods-Giphy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5264A6D667F308604D7599F528A5056F /* Debug */,
+				4CB512CEE6C89F8E802CD34943012BE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07488D4657FB0A78086563621D425F8A /* Debug */,
+				A1962E6FF39BBAC201A2E5DDF99557DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72EB1178A72C1A516AAA73EB83A031FC /* Build configuration list for PBXNativeTarget "GiphyCoreSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0F0D792FFFD81CE6C2D6F2420E1BE3D /* Debug */,
+				65D93D107FA0E7B0CBD3FC8633F33F3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
