@@ -33,5 +33,5 @@ class GPAPIConstant {
     let baseProductionUrl = "http://api.giphy.com"
     let baseStagingUrl = "http://api.giphy.com"
     
-    static let apiVersion1 = "v1"
+    static let apiVersion1 = "/v1"
 }

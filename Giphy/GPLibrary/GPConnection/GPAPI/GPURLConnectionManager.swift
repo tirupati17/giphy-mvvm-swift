@@ -54,9 +54,10 @@ class GPURLConnectionManager {
             case .APIRequestSearch?:
                 if let response = response as? Data {
                     do {
-                        let responseObject = try JSONDecoder().decode([GPSearchViewControllerModel].self, from: response)
+                        let responseObject = try JSONDecoder().decode(GPSearchViewControllerModel.self, from: response)
                         success(responseObject as JSON)
-                    } catch {
+                    } catch let error {
+                        GPLogger.log(error.localizedDescription)
                         success(response as JSON)
                     }
                 } else {

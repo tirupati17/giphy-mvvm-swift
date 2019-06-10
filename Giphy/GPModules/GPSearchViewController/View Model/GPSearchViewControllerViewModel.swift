@@ -12,14 +12,35 @@ class GPSearchViewControllerViewModel {
 
     private let service: GPSearchViewControllerServiceProtocol
 
-    private var model: [GPSearchViewControllerModel] = [GPSearchViewControllerModel]() {
+    private var model: GPSearchViewControllerModel? {
         didSet {
-            self.count = self.model.count
+            if let model = self.model {
+                if let gpImages = model.gpImages {
+                    self.gpImages.append(contentsOf: gpImages)
+                    self.count = self.gpImages.count
+                }
+                if let pagination = model.pagination {
+                    if let totalCount = pagination.totalCount {
+                        self.totalCount = totalCount
+                    }
+                    if let offset = pagination.offset {
+                        self.offset = offset
+                    }
+                }
+            }
         }
     }
 
     /// Count your data in model
     var count: Int = 0
+    var totalCount: Int = 0
+    var offset: Int = 0
+
+    /// for pagination
+    var searchLimit: String = "10"
+    var searchOffset: String {
+        return "\(self.count)"
+    }
 
     //MARK: -- Network checking
 
@@ -51,7 +72,8 @@ class GPSearchViewControllerViewModel {
     }
 
     /// Define selected model
-    var selectedObject: GPSearchViewControllerModel?
+    var selectedObject: GPImage?
+    var gpImages: [GPImage] = [GPImage]()
 
     //MARK: -- Closure Collection
     var showAlertClosure: (() -> ())?
@@ -80,10 +102,11 @@ class GPSearchViewControllerViewModel {
                 self.isDisconnected = true
                 self.internetConnectionStatus?()
             case .online:
-                self.service.searchImage(success: { (model) in
-                    
-                }) {
-                    //failed block
+                self.service.searchImage(query, limit: self.searchLimit, offset: self.searchOffset, success: { (model) in
+                    self.model = model
+                    self.didGetData?()
+                }) { (error) in
+                    self.serverErrorStatus?()
                 }
                 break
             default:

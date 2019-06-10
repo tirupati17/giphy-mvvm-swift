@@ -16,9 +16,9 @@ enum GPRequestMethod : Int {
 }
 
 class GPAPIStringUrl {
-    static let kSearchEndpoint = "/gifs/search?api_key=%@&q=%@&limit=%@&count=%@&offset=%@"
+    static let kSearchEndpoint = "/gifs/search?api_key=%@&q=%@&limit=%@&offset=%@"
     
-    static func searchEndpoint(_ apiKey : String, query : String, limit : String, count : String, offset : String) -> String {
-        return String(format: kSearchEndpoint, apiKey, query, limit, count, offset)
+    static func searchEndpoint(_ apiKey : String, query : String, limit : String, offset : String) -> String {
+        return String(format: kSearchEndpoint, apiKey, query, limit, offset)
     }
 }

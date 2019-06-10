@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		648FECA875747EEE3F57BB90 /* Pods_Giphy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA085825A93051D9190E1D /* Pods_Giphy.framework */; };
 		D552039C22A8F6DA00E356F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552039B22A8F6DA00E356F1 /* AppDelegate.swift */; };
 		D552039E22A8F6DA00E356F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552039D22A8F6DA00E356F1 /* ViewController.swift */; };
 		D55203A122A8F6DA00E356F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D552039F22A8F6DA00E356F1 /* Main.storyboard */; };
@@ -37,11 +36,13 @@
 		D5D277C122AE307400465008 /* GPURLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277C022AE307400465008 /* GPURLSessionManager.swift */; };
 		D5D277C322AE344B00465008 /* NSMutableData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277C222AE344B00465008 /* NSMutableData+Extensions.swift */; };
 		D5D277C522AE403C00465008 /* GPImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277C422AE403C00465008 /* GPImage.swift */; };
+		D5D277C722AE5C8600465008 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277C622AE5C8600465008 /* UIView+Extensions.swift */; };
+		D5D277C922AE5D6500465008 /* GPSearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277C822AE5D6500465008 /* GPSearchListCell.swift */; };
+		D5D277CB22AE5E3B00465008 /* UICollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277CA22AE5E3B00465008 /* UICollection+Extensions.swift */; };
+		D5D277CD22AE642400465008 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277CC22AE642400465008 /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08EA085825A93051D9190E1D /* Pods_Giphy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giphy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFF6FD9B3930D386811F0253 /* Pods-Giphy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giphy.release.xcconfig"; path = "Target Support Files/Pods-Giphy/Pods-Giphy.release.xcconfig"; sourceTree = "<group>"; };
 		D552039822A8F6DA00E356F1 /* Giphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D552039B22A8F6DA00E356F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D552039D22A8F6DA00E356F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +74,10 @@
 		D5D277C022AE307400465008 /* GPURLSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPURLSessionManager.swift; sourceTree = "<group>"; };
 		D5D277C222AE344B00465008 /* NSMutableData+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableData+Extensions.swift"; sourceTree = "<group>"; };
 		D5D277C422AE403C00465008 /* GPImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPImage.swift; sourceTree = "<group>"; };
-		D72EEF9A0C28692FD4A03DEF /* Pods-Giphy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giphy.debug.xcconfig"; path = "Target Support Files/Pods-Giphy/Pods-Giphy.debug.xcconfig"; sourceTree = "<group>"; };
+		D5D277C622AE5C8600465008 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D5D277C822AE5D6500465008 /* GPSearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSearchListCell.swift; sourceTree = "<group>"; };
+		D5D277CA22AE5E3B00465008 /* UICollection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollection+Extensions.swift"; sourceTree = "<group>"; };
+		D5D277CC22AE642400465008 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,37 +85,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				648FECA875747EEE3F57BB90 /* Pods_Giphy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06DB0258B45C99D9A1B08DB0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				08EA085825A93051D9190E1D /* Pods_Giphy.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		54946C56341B52E1B0A52910 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D72EEF9A0C28692FD4A03DEF /* Pods-Giphy.debug.xcconfig */,
-				CFF6FD9B3930D386811F0253 /* Pods-Giphy.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		D552038F22A8F6DA00E356F1 = {
 			isa = PBXGroup;
 			children = (
 				D552039A22A8F6DA00E356F1 /* Giphy */,
 				D552039922A8F6DA00E356F1 /* Products */,
-				54946C56341B52E1B0A52910 /* Pods */,
-				06DB0258B45C99D9A1B08DB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				D55203B622A8FF4F00E356F1 /* GPSearchViewControllerView.swift */,
+				D5D277C822AE5D6500465008 /* GPSearchListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,6 +199,9 @@
 				D59098D922AD510400839E69 /* UIStoryboard+Extensions.swift */,
 				D5D277BE22AE300C00465008 /* UIApplication+Extensions.swift */,
 				D5D277C222AE344B00465008 /* NSMutableData+Extensions.swift */,
+				D5D277C622AE5C8600465008 /* UIView+Extensions.swift */,
+				D5D277CA22AE5E3B00465008 /* UICollection+Extensions.swift */,
+				D5D277CC22AE642400465008 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,11 +299,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D55203AA22A8F6DD00E356F1 /* Build configuration list for PBXNativeTarget "Giphy" */;
 			buildPhases = (
-				619002AD06F9BE29B1256DC4 /* [CP] Check Pods Manifest.lock */,
 				D552039422A8F6DA00E356F1 /* Sources */,
 				D552039522A8F6DA00E356F1 /* Frameworks */,
 				D552039622A8F6DA00E356F1 /* Resources */,
-				FE838C4B3BDBA8B21F30EC98 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -372,62 +358,17 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		619002AD06F9BE29B1256DC4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Giphy-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FE838C4B3BDBA8B21F30EC98 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Giphy/Pods-Giphy-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GiphyCoreSDK/GiphyCoreSDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GiphyCoreSDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Giphy/Pods-Giphy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		D552039422A8F6DA00E356F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D277CD22AE642400465008 /* UIImageView+Extensions.swift in Sources */,
 				D5D277B922AE2C9A00465008 /* GPConstant.swift in Sources */,
 				D55203BD22A8FF5000E356F1 /* GPSearchViewControllerView.swift in Sources */,
 				D59098CC22AD459100839E69 /* GPError.swift in Sources */,
 				D5D277B722AE2B4100465008 /* GPAPIStringUrl.swift in Sources */,
+				D5D277CB22AE5E3B00465008 /* UICollection+Extensions.swift in Sources */,
 				D552039E22A8F6DA00E356F1 /* ViewController.swift in Sources */,
 				D5D277C122AE307400465008 /* GPURLSessionManager.swift in Sources */,
 				D5D277C522AE403C00465008 /* GPImage.swift in Sources */,
@@ -436,11 +377,13 @@
 				D552039C22A8F6DA00E356F1 /* AppDelegate.swift in Sources */,
 				D59098D222AD4B3900839E69 /* GPViewController.swift in Sources */,
 				D59098CE22AD45B300839E69 /* GPLogger.swift in Sources */,
+				D5D277C722AE5C8600465008 /* UIView+Extensions.swift in Sources */,
 				D55203BC22A8FF5000E356F1 /* GPSearchViewControllerModel.swift in Sources */,
 				D59098D422AD4B4800839E69 /* GPTableViewController.swift in Sources */,
 				D5D277BD22AE2FA400465008 /* GPAPIRequest.swift in Sources */,
 				D5D277B522AE2B2C00465008 /* GPAPIRequestType.swift in Sources */,
 				D5D277BF22AE300C00465008 /* UIApplication+Extensions.swift in Sources */,
+				D5D277C922AE5D6500465008 /* GPSearchListCell.swift in Sources */,
 				D59098DD22AD5DB900839E69 /* Reach.swift in Sources */,
 				D5D277C322AE344B00465008 /* NSMutableData+Extensions.swift in Sources */,
 				D59098D822AD4FF000839E69 /* GPViewControllerProtocol.swift in Sources */,
@@ -593,7 +536,6 @@
 		};
 		D55203AB22A8F6DD00E356F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D72EEF9A0C28692FD4A03DEF /* Pods-Giphy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -612,7 +554,6 @@
 		};
 		D55203AC22A8F6DD00E356F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFF6FD9B3930D386811F0253 /* Pods-Giphy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
