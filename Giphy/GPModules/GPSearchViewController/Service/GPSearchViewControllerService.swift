@@ -10,7 +10,15 @@ import Foundation
 
 class GPSearchViewControllerService: GPSearchViewControllerServiceProtocol {
     // Call protocol function
-    func searchImage(success: @escaping (GPSearchViewControllerModel) -> (), failure: @escaping () -> ()) {
-        //call search image network api
+    func searchImage(_ query : String, success: @escaping (GPSearchViewControllerModel) -> (), failure: @escaping (Error) -> ()) {
+        GPAPIRequest.seachImage(query, success: { (response) in
+            if let response = response as? GPSearchViewControllerModel {
+                success(response)
+            } else {
+                failure(GPError.customError(message: "Invalid model"))
+            }
+        }) { (error) in
+            failure(error)
+        }
     }
 }

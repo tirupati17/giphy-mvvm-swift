@@ -20,13 +20,23 @@
 		D55203BF22A8FF5000E356F1 /* GPSearchViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55203BA22A8FF4F00E356F1 /* GPSearchViewControllerViewModel.swift */; };
 		D59098CC22AD459100839E69 /* GPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098CB22AD459100839E69 /* GPError.swift */; };
 		D59098CE22AD45B300839E69 /* GPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098CD22AD45B300839E69 /* GPLogger.swift */; };
-		D59098D022AD4A3A00839E69 /* GPSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098CF22AD4A3A00839E69 /* GPSearch.swift */; };
 		D59098D222AD4B3900839E69 /* GPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098D122AD4B3900839E69 /* GPViewController.swift */; };
 		D59098D422AD4B4800839E69 /* GPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098D322AD4B4800839E69 /* GPTableViewController.swift */; };
 		D59098D622AD4B5D00839E69 /* GPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098D522AD4B5D00839E69 /* GPTableViewCell.swift */; };
 		D59098D822AD4FF000839E69 /* GPViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098D722AD4FF000839E69 /* GPViewControllerProtocol.swift */; };
 		D59098DA22AD510400839E69 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098D922AD510400839E69 /* UIStoryboard+Extensions.swift */; };
 		D59098DD22AD5DB900839E69 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59098DC22AD5DB900839E69 /* Reach.swift */; };
+		D5D277B122AE2AFC00465008 /* GPAPIRequest+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277B022AE2AFC00465008 /* GPAPIRequest+Search.swift */; };
+		D5D277B322AE2B1500465008 /* GPAPIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277B222AE2B1500465008 /* GPAPIConstant.swift */; };
+		D5D277B522AE2B2C00465008 /* GPAPIRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277B422AE2B2C00465008 /* GPAPIRequestType.swift */; };
+		D5D277B722AE2B4100465008 /* GPAPIStringUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277B622AE2B4100465008 /* GPAPIStringUrl.swift */; };
+		D5D277B922AE2C9A00465008 /* GPConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277B822AE2C9A00465008 /* GPConstant.swift */; };
+		D5D277BB22AE2F1200465008 /* GPURLConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277BA22AE2F1200465008 /* GPURLConnectionManager.swift */; };
+		D5D277BD22AE2FA400465008 /* GPAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277BC22AE2FA400465008 /* GPAPIRequest.swift */; };
+		D5D277BF22AE300C00465008 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277BE22AE300C00465008 /* UIApplication+Extensions.swift */; };
+		D5D277C122AE307400465008 /* GPURLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277C022AE307400465008 /* GPURLSessionManager.swift */; };
+		D5D277C322AE344B00465008 /* NSMutableData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277C222AE344B00465008 /* NSMutableData+Extensions.swift */; };
+		D5D277C522AE403C00465008 /* GPImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277C422AE403C00465008 /* GPImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,13 +56,23 @@
 		D55203BA22A8FF4F00E356F1 /* GPSearchViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerViewModel.swift; sourceTree = "<group>"; };
 		D59098CB22AD459100839E69 /* GPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPError.swift; sourceTree = "<group>"; };
 		D59098CD22AD45B300839E69 /* GPLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPLogger.swift; sourceTree = "<group>"; };
-		D59098CF22AD4A3A00839E69 /* GPSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSearch.swift; sourceTree = "<group>"; };
 		D59098D122AD4B3900839E69 /* GPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPViewController.swift; sourceTree = "<group>"; };
 		D59098D322AD4B4800839E69 /* GPTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTableViewController.swift; sourceTree = "<group>"; };
 		D59098D522AD4B5D00839E69 /* GPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTableViewCell.swift; sourceTree = "<group>"; };
 		D59098D722AD4FF000839E69 /* GPViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPViewControllerProtocol.swift; sourceTree = "<group>"; };
 		D59098D922AD510400839E69 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		D59098DC22AD5DB900839E69 /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		D5D277B022AE2AFC00465008 /* GPAPIRequest+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GPAPIRequest+Search.swift"; sourceTree = "<group>"; };
+		D5D277B222AE2B1500465008 /* GPAPIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAPIConstant.swift; sourceTree = "<group>"; };
+		D5D277B422AE2B2C00465008 /* GPAPIRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAPIRequestType.swift; sourceTree = "<group>"; };
+		D5D277B622AE2B4100465008 /* GPAPIStringUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAPIStringUrl.swift; sourceTree = "<group>"; };
+		D5D277B822AE2C9A00465008 /* GPConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPConstant.swift; sourceTree = "<group>"; };
+		D5D277BA22AE2F1200465008 /* GPURLConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPURLConnectionManager.swift; sourceTree = "<group>"; };
+		D5D277BC22AE2FA400465008 /* GPAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAPIRequest.swift; sourceTree = "<group>"; };
+		D5D277BE22AE300C00465008 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		D5D277C022AE307400465008 /* GPURLSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPURLSessionManager.swift; sourceTree = "<group>"; };
+		D5D277C222AE344B00465008 /* NSMutableData+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableData+Extensions.swift"; sourceTree = "<group>"; };
+		D5D277C422AE403C00465008 /* GPImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPImage.swift; sourceTree = "<group>"; };
 		D72EEF9A0C28692FD4A03DEF /* Pods-Giphy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giphy.debug.xcconfig"; path = "Target Support Files/Pods-Giphy/Pods-Giphy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,11 +142,11 @@
 		D55203B022A8FF4F00E356F1 /* GPSearchViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D55203B122A8FF4F00E356F1 /* Protocol */,
 				D55203B322A8FF4F00E356F1 /* Model */,
 				D55203B522A8FF4F00E356F1 /* View */,
-				D55203B722A8FF4F00E356F1 /* Service */,
 				D55203B922A8FF4F00E356F1 /* View Model */,
+				D55203B122A8FF4F00E356F1 /* Protocol */,
+				D55203B722A8FF4F00E356F1 /* Service */,
 			);
 			path = GPSearchViewController;
 			sourceTree = "<group>";
@@ -192,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				D59098D922AD510400839E69 /* UIStoryboard+Extensions.swift */,
+				D5D277BE22AE300C00465008 /* UIApplication+Extensions.swift */,
+				D5D277C222AE344B00465008 /* NSMutableData+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -211,6 +233,7 @@
 				D59098C922AD453F00839E69 /* GPConnection */,
 				D59098C822AD452C00839E69 /* GPModel */,
 				D59098C722AD452000839E69 /* GPClass */,
+				D5D277B822AE2C9A00465008 /* GPConstant.swift */,
 			);
 			path = GPLibrary;
 			sourceTree = "<group>";
@@ -228,7 +251,7 @@
 		D59098C822AD452C00839E69 /* GPModel */ = {
 			isa = PBXGroup;
 			children = (
-				D59098CF22AD4A3A00839E69 /* GPSearch.swift */,
+				D5D277C422AE403C00465008 /* GPImage.swift */,
 			);
 			path = GPModel;
 			sourceTree = "<group>";
@@ -236,6 +259,7 @@
 		D59098C922AD453F00839E69 /* GPConnection */ = {
 			isa = PBXGroup;
 			children = (
+				D5D277AD22AE29F200465008 /* GPAPI */,
 			);
 			path = GPConnection;
 			sourceTree = "<group>";
@@ -248,6 +272,36 @@
 				D59098D522AD4B5D00839E69 /* GPTableViewCell.swift */,
 			);
 			path = GPView;
+			sourceTree = "<group>";
+		};
+		D5D277AD22AE29F200465008 /* GPAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D5D277AF22AE2A1500465008 /* GPAPIRequest */,
+				D5D277AE22AE2A0A00465008 /* GPAPICommon */,
+				D5D277BA22AE2F1200465008 /* GPURLConnectionManager.swift */,
+				D5D277C022AE307400465008 /* GPURLSessionManager.swift */,
+			);
+			path = GPAPI;
+			sourceTree = "<group>";
+		};
+		D5D277AE22AE2A0A00465008 /* GPAPICommon */ = {
+			isa = PBXGroup;
+			children = (
+				D5D277B222AE2B1500465008 /* GPAPIConstant.swift */,
+				D5D277B422AE2B2C00465008 /* GPAPIRequestType.swift */,
+				D5D277B622AE2B4100465008 /* GPAPIStringUrl.swift */,
+			);
+			path = GPAPICommon;
+			sourceTree = "<group>";
+		};
+		D5D277AF22AE2A1500465008 /* GPAPIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				D5D277B022AE2AFC00465008 /* GPAPIRequest+Search.swift */,
+				D5D277BC22AE2FA400465008 /* GPAPIRequest.swift */,
+			);
+			path = GPAPIRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,22 +424,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D277B922AE2C9A00465008 /* GPConstant.swift in Sources */,
 				D55203BD22A8FF5000E356F1 /* GPSearchViewControllerView.swift in Sources */,
 				D59098CC22AD459100839E69 /* GPError.swift in Sources */,
+				D5D277B722AE2B4100465008 /* GPAPIStringUrl.swift in Sources */,
 				D552039E22A8F6DA00E356F1 /* ViewController.swift in Sources */,
+				D5D277C122AE307400465008 /* GPURLSessionManager.swift in Sources */,
+				D5D277C522AE403C00465008 /* GPImage.swift in Sources */,
+				D5D277B122AE2AFC00465008 /* GPAPIRequest+Search.swift in Sources */,
 				D55203BB22A8FF5000E356F1 /* GPSearchViewControllerServiceProtocol.swift in Sources */,
 				D552039C22A8F6DA00E356F1 /* AppDelegate.swift in Sources */,
 				D59098D222AD4B3900839E69 /* GPViewController.swift in Sources */,
 				D59098CE22AD45B300839E69 /* GPLogger.swift in Sources */,
 				D55203BC22A8FF5000E356F1 /* GPSearchViewControllerModel.swift in Sources */,
 				D59098D422AD4B4800839E69 /* GPTableViewController.swift in Sources */,
+				D5D277BD22AE2FA400465008 /* GPAPIRequest.swift in Sources */,
+				D5D277B522AE2B2C00465008 /* GPAPIRequestType.swift in Sources */,
+				D5D277BF22AE300C00465008 /* UIApplication+Extensions.swift in Sources */,
 				D59098DD22AD5DB900839E69 /* Reach.swift in Sources */,
+				D5D277C322AE344B00465008 /* NSMutableData+Extensions.swift in Sources */,
 				D59098D822AD4FF000839E69 /* GPViewControllerProtocol.swift in Sources */,
 				D55203BE22A8FF5000E356F1 /* GPSearchViewControllerService.swift in Sources */,
-				D59098D022AD4A3A00839E69 /* GPSearch.swift in Sources */,
 				D59098DA22AD510400839E69 /* UIStoryboard+Extensions.swift in Sources */,
 				D59098D622AD4B5D00839E69 /* GPTableViewCell.swift in Sources */,
 				D55203BF22A8FF5000E356F1 /* GPSearchViewControllerViewModel.swift in Sources */,
+				D5D277BB22AE2F1200465008 /* GPURLConnectionManager.swift in Sources */,
+				D5D277B322AE2B1500465008 /* GPAPIConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

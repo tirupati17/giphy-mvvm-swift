@@ -9,9 +9,5 @@
 import Foundation
 
 protocol GPSearchViewControllerServiceProtocol {
-    func searchImage(success: @escaping(_ data: GPSearchViewControllerModel) -> (), failure: @escaping() -> ())
-}
-
-protocol GPSearchViewControllerViewProtocol : GPViewControllerProtocol {
-    
+    func searchImage(_ query : String, success: @escaping(_ data: GPSearchViewControllerModel) -> (), failure: @escaping(Error) -> ())
 }

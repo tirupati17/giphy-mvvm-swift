@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -66,7 +66,7 @@
 		418CD3C2FE8457E4BFAAF871FCDDC24E /* GPHAbstractClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHAbstractClient.swift; path = Sources/GPHAbstractClient.swift; sourceTree = "<group>"; };
 		47D4D48B5FEB99F1B1D02D0FF4AEA488 /* GPHError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHError.swift; path = Sources/GPHError.swift; sourceTree = "<group>"; };
 		52486FDD22F349521C87D356DB17D5B9 /* Pods-Giphy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Giphy.release.xcconfig"; sourceTree = "<group>"; };
-		5396ED4CCE0EA4B22D4BC91DFCE1746B /* GiphyCoreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GiphyCoreSDK.framework; path = GiphyCoreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5396ED4CCE0EA4B22D4BC91DFCE1746B /* GiphyCoreSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GiphyCoreSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7EB778E9C18E17A52E28D5A249667D /* GPHNetworkReachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHNetworkReachability.swift; path = Sources/GPHNetworkReachability.swift; sourceTree = "<group>"; };
 		6DC5E6FA4B7A118FC8E2FF1A20178B06 /* Pods-Giphy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Giphy-dummy.m"; sourceTree = "<group>"; };
 		6E35FD4D684302D7D3840654DCEFA1B3 /* GPHListTermSuggestionRespose.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHListTermSuggestionRespose.swift; path = Sources/GPHListTermSuggestionRespose.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		8B6DCD490F8AC95C79081505B661E4DF /* GiphyCore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GiphyCore.swift; path = Sources/GiphyCore.swift; sourceTree = "<group>"; };
 		95C43E640A78DAD43A874A1665DB47F3 /* GiphyCoreSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GiphyCoreSDK-dummy.m"; sourceTree = "<group>"; };
 		9C69DDA69A34B1621C8F26BFBBF6DB59 /* GPHChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHChannel.swift; path = Sources/GPHChannel.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EC7F054A34FA8A273FB9079C87FC91F /* GPHTermSuggestion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHTermSuggestion.swift; path = Sources/GPHTermSuggestion.swift; sourceTree = "<group>"; };
 		A2F9662EC7759D323CBC9305DAAC2B23 /* Pods-Giphy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Giphy-acknowledgements.plist"; sourceTree = "<group>"; };
 		BBA6BDCD22967E086AB1EC8C011CFCBA /* GiphyCoreSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GiphyCoreSDK.modulemap; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		EEF77FC6A5BCCC5E63D6E7A60DB0A166 /* Pods-Giphy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Giphy.modulemap"; sourceTree = "<group>"; };
 		F044D04D7BC88122599B2AD99E52E166 /* GPHImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHImage.swift; path = Sources/GPHImage.swift; sourceTree = "<group>"; };
 		F8AFDAB51594A66CEF3BD2463854B9FB /* GPHRequestConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPHRequestConfig.swift; path = Sources/GPHRequestConfig.swift; sourceTree = "<group>"; };
-		FA6B54270A4BA43C655F00D6624A9D1F /* Pods_Giphy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Giphy.framework; path = "Pods-Giphy.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6B54270A4BA43C655F00D6624A9D1F /* Pods_Giphy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giphy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2E3F2B9C0F5F7D03DA602FBDB49C52 /* GiphyCoreSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GiphyCoreSDK-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,7 +242,6 @@
 				76D78EF15F71F3885041F0962CA0630C /* GPHUser.swift */,
 				39D1415B0FFD2942E483D2F018F1E9BB /* Support Files */,
 			);
-			name = GiphyCoreSDK;
 			path = GiphyCoreSDK;
 			sourceTree = "<group>";
 		};
@@ -312,14 +311,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = A5B0063952B9FF870AEC72700F47CA58 /* Products */;
@@ -411,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -488,11 +489,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Giphy/Pods-Giphy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Giphy/Pods-Giphy.modulemap";
 				OTHER_LDFLAGS = "";
@@ -526,11 +523,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Giphy/Pods-Giphy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Giphy/Pods-Giphy.modulemap";
 				OTHER_LDFLAGS = "";
@@ -563,11 +556,7 @@
 				INFOPLIST_FILE = "Target Support Files/GiphyCoreSDK/GiphyCoreSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GiphyCoreSDK/GiphyCoreSDK.modulemap";
 				PRODUCT_MODULE_NAME = GiphyCoreSDK;
 				PRODUCT_NAME = GiphyCoreSDK;
@@ -599,11 +588,7 @@
 				INFOPLIST_FILE = "Target Support Files/GiphyCoreSDK/GiphyCoreSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GiphyCoreSDK/GiphyCoreSDK.modulemap";
 				PRODUCT_MODULE_NAME = GiphyCoreSDK;
 				PRODUCT_NAME = GiphyCoreSDK;
@@ -621,6 +606,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -670,8 +656,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

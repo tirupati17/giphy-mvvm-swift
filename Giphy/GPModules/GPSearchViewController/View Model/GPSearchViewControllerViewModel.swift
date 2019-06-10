@@ -73,7 +73,7 @@ class GPSearchViewControllerViewModel {
         self.networkStatus = Reach().connectionStatus()
     }
 
-    //MARK: -- Example Func
+    //MARK: -- bind search image
     func bindSearchImage(query : String) {
         switch networkStatus {
             case .offline:
