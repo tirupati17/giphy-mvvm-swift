@@ -14,9 +14,7 @@ build_project:
     #build test
     - xcodebuild test -project Giphy.xcodeproj -scheme Giphy analyze -destination 'platform=iOS Simulator,name=iPhone X' | xcpretty -s
   tags:
-    - ios_12-2
-    - xcode_10-2
-    - osx_10-14
+    - giphy-mvvm-swift
 
 archive_project:
   stage: archive
@@ -33,6 +31,4 @@ archive_project:
     paths:
     - build/Giphy.ipa
   tags:
-    - ios_12-2
-    - xcode_10-2
-    - osx_10-14
+    - giphy-mvvm-swift
