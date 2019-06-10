@@ -1,0 +1,38 @@
+# Lifted from: https://about.gitlab.com/2016/03/10/setting-up-gitlab-ci-for-ios-projects/
+# This file assumes an own GitLab CI runner, setup on an OS X system.
+stages:
+  - build
+  - archive
+
+build_project:
+  stage: build
+  script:
+    #build clean debug 
+    - xcodebuild clean -project Giphy.xcodeproj -configuration Debug -alltargets | xcpretty
+    #build clean release
+    - xcodebuild clean -project Giphy.xcodeproj -configuration ReleaseAdhoc -alltargets
+    #build test
+    - xcodebuild test -project Giphy.xcodeproj -scheme Giphy analyze -destination 'platform=iOS Simulator,name=iPhone X' | xcpretty -s
+  tags:
+    - ios_12-2
+    - xcode_10-2
+    - osx_10-14
+
+archive_project:
+  stage: archive
+  script:
+    #archive project - release
+    - xcodebuild -scheme Giphy -configuration Release archive -archivePath build/Giphy.xcarchive
+    #archive project - debug
+    - xcodebuild -scheme Giphy -configuration Debug archive -archivePath build/Giphy.xcarchive
+    #export ipa
+    - xcodebuild -exportArchive -archivePath  build/Giphy.xcarchive -exportPath  Giphy.ipa  -exportOptionsPlist giphyExportOptions.plist
+  only:
+    - master
+  artifacts:
+    paths:
+    - build/Giphy.ipa
+  tags:
+    - ios_12-2
+    - xcode_10-2
+    - osx_10-14
