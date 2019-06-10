@@ -42,6 +42,7 @@
 		D5D277CD22AE642400465008 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277CC22AE642400465008 /* UIImageView+Extensions.swift */; };
 		D5D277D522AE9DCA00465008 /* GiphyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277D422AE9DCA00465008 /* GiphyTests.swift */; };
 		D5D277E322AE9DE000465008 /* GiphyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277E222AE9DE000465008 /* GiphyUITests.swift */; };
+		D5D277EC22AEB7C800465008 /* GPAppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277EB22AEB7C800465008 /* GPAppDelegateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		D5D277E022AE9DE000465008 /* GiphyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiphyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D277E222AE9DE000465008 /* GiphyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyUITests.swift; sourceTree = "<group>"; };
 		D5D277E422AE9DE000465008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5D277EB22AEB7C800465008 /* GPAppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAppDelegateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +340,7 @@
 		D5D277D322AE9DCA00465008 /* GiphyTests */ = {
 			isa = PBXGroup;
 			children = (
+				D5D277EA22AEB79D00465008 /* ClassTests */,
 				D5D277D422AE9DCA00465008 /* GiphyTests.swift */,
 				D5D277D622AE9DCA00465008 /* Info.plist */,
 			);
@@ -351,6 +354,14 @@
 				D5D277E422AE9DE000465008 /* Info.plist */,
 			);
 			path = GiphyUITests;
+			sourceTree = "<group>";
+		};
+		D5D277EA22AEB79D00465008 /* ClassTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5D277EB22AEB7C800465008 /* GPAppDelegateTests.swift */,
+			);
+			path = ClassTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D277D522AE9DCA00465008 /* GiphyTests.swift in Sources */,
+				D5D277EC22AEB7C800465008 /* GPAppDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
