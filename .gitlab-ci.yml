@@ -17,6 +17,7 @@ build_project:
     - ios_10
     - xcode_10-2
     - osx_10-14
+    - gitlab-org
 
 archive_project:
   stage: archive
@@ -36,3 +37,4 @@ archive_project:
     - ios_10
     - xcode_10-2
     - osx_10-14
+    - gitlab-org
