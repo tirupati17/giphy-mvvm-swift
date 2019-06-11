@@ -15,10 +15,15 @@ class GPSearchViewControllerView: GPViewController {
     var tableView : UITableView = UITableView()
     var isUpdatedConstraints: Bool? = false
 
-    var viewModel = GPSearchViewControllerViewModel()
+    private var viewModel = GPSearchViewControllerViewModel()
     override func loadView() {
         super.loadView()
-
+        self.prepareTableView()
+        self.setupConstraints()
+    }
+    
+    /// Prepare the table view.
+    private func prepareTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(GPSearchListCell.self, forCellReuseIdentifier: searchViewControllerViewCellId)
@@ -28,14 +33,13 @@ class GPSearchViewControllerView: GPViewController {
         tableView.refreshControl = self.refreshControl
         
         view.addSubview(tableView)
-        self.setupConstraints()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setupViewModel()
-        self.viewModel.bindSearchImage(query: "cheese")
+        self.observeEvents()
+        self.viewModel.didGetData!("cheese")
     }
     
     func setupConstraints() {
@@ -48,14 +52,22 @@ class GPSearchViewControllerView: GPViewController {
     }
 
     override func handleRefresh(_ refreshControl: UIRefreshControl) {
-        self.viewModel.bindSearchImage(query: "cheese")
+        self.viewModel.didGetData!("cheese")
     }
     
-    fileprivate func setupViewModel() {
-
+    // Observe event from view-model
+    fileprivate func observeEvents() {
+        
         self.viewModel.showAlertClosure = {
             if let alert = self.viewModel.alertMessage {
                 self.showAlertWithTitleAndMessage(message: alert)
+            }
+        }
+        
+        self.viewModel.imageSelected = { gpImage in
+            DispatchQueue.main.async {
+                GPLogger.log(gpImage.title ?? "")
+                //navigate to detail page
             }
         }
         
@@ -71,18 +83,16 @@ class GPSearchViewControllerView: GPViewController {
             self.showAlertWithTitleAndMessage(message: "Internet disconnected")
         }
 
-        self.viewModel.serverErrorStatus = {
-            self.showAlertWithTitleAndMessage(message: "Server Error / Unknown Error")
+        self.viewModel.serverErrorStatus = { error in
+            self.showAlertWithTitleAndMessage(message: error.localizedDescription)
         }
-
-        self.viewModel.didGetData = {
-            // update UI after get data
-            GPLogger.log(self.viewModel.gpImages.count)
+        
+        self.viewModel.reloadTable = { [weak self] in
             DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.navigationItem.title = "\(self.viewModel.count) results out of \(self.viewModel.totalCount)"
+                self?.tableView.reloadData()
+                self?.navigationItem.title = "\(String(describing: self?.viewModel.count)) results out of \(String(describing: self?.viewModel.totalCount))"
             }
-            self.stopViewAnimation()
+            self?.stopViewAnimation()
         }
     }
 }
@@ -90,13 +100,14 @@ class GPSearchViewControllerView: GPViewController {
 
 extension GPSearchViewControllerView : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 64
+        return self.viewModel.rowHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if let gpImage = self.viewModel.gpImages[safe : indexPath.row] {
             GPLogger.log(gpImage.title ?? "")
+            self.viewModel.imageSelected(gpImage)
         }
     }
     
@@ -108,7 +119,7 @@ extension GPSearchViewControllerView : UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return self.viewModel.numberOfSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

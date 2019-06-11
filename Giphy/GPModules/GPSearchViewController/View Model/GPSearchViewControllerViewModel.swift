@@ -35,6 +35,8 @@ class GPSearchViewControllerViewModel {
     var count: Int = 0
     var totalCount: Int = 0
     var offset: Int = 0
+    var rowHeight: CGFloat = 64
+    var numberOfSection: Int = 1
 
     /// for pagination
     var searchLimit: String = "10"
@@ -72,22 +74,44 @@ class GPSearchViewControllerViewModel {
     }
 
     /// Define selected model
-    var selectedObject: GPImage?
     var gpImages: [GPImage] = [GPImage]()
 
-    //MARK: -- Closure Collection
+    /// Callback to reload the table.
+    var reloadTable: ()->() = { }
+    
+    // MARK: Input
+    var viewDidLoad: ()->() = {}
     var showAlertClosure: (() -> ())?
     var updateLoadingStatus: (() -> ())?
     var internetConnectionStatus: (() -> ())?
-    var serverErrorStatus: (() -> ())?
-    var didGetData: (() -> ())?
+    var serverErrorStatus: ((Error) -> ())?
+    var didGetData: ((_ query:String) -> ())?
+    
+    // MARK: Events
+    
+    /// Callback to pass the selected image.
+    var imageSelected: (GPImage)->() = { _ in }
+    
+    // MARK: Output
+    var numberOfRows = 0
 
     init(withGPSearchViewController serviceProtocol: GPSearchViewControllerServiceProtocol = GPSearchViewControllerService() ) {
         self.service = serviceProtocol
 
         NotificationCenter.default.addObserver(self, selector: #selector(self.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
         Reach().monitorReachabilityChanges()
-
+        
+        viewDidLoad = { [weak self] in
+            //perform any initial operation from view-model(Here)
+            self?.reloadTable()
+        }
+        
+        // seach image based on query
+        didGetData = { query in
+            self.bindSearchImage(query: query, completion: { [weak self] in
+                self?.reloadTable()
+            })
+        }
     }
 
     //MARK: Internet monitor status
@@ -95,8 +119,8 @@ class GPSearchViewControllerViewModel {
         self.networkStatus = Reach().connectionStatus()
     }
 
-    //MARK: -- bind search image
-    func bindSearchImage(query : String) {
+    //MARK: -- search image
+    private func bindSearchImage(query : String, completion: @escaping ()->()) {
         switch networkStatus {
             case .offline:
                 self.isDisconnected = true
@@ -104,9 +128,9 @@ class GPSearchViewControllerViewModel {
             case .online:
                 self.service.searchImage(query, limit: self.searchLimit, offset: self.searchOffset, success: { (model) in
                     self.model = model
-                    self.didGetData?()
+                    completion()
                 }) { (error) in
-                    self.serverErrorStatus?()
+                    self.serverErrorStatus?(error)
                 }
                 break
             default:
