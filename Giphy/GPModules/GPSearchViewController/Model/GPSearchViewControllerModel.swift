@@ -28,17 +28,17 @@ struct GPSearchViewControllerModel: Codable {
 }
 
 // MARK: - Analytics
-struct Analytics: Codable {
+struct Analytics: Codable, Equatable {
     let onload, onclick, onsent: Onclick?
 }
 
 // MARK: - Onclick
-struct Onclick: Codable {
+struct Onclick: Codable, Equatable {
     let url: String?
 }
 
 // MARK: - Images
-struct Images: Codable {
+struct Images: Codable, Equatable {
     let fixedHeightStill, originalStill: The480_WStill?
     let fixedWidth: FixedHeight?
     let fixedHeightSmallStill: The480_WStill?
@@ -84,13 +84,13 @@ struct Images: Codable {
 }
 
 // MARK: - The480_WStill
-struct The480_WStill: Codable {
+struct The480_WStill: Codable, Equatable {
     let url: String?
     let width, height, size: String?
 }
 
 // MARK: - DownsizedSmall
-struct DownsizedSmall: Codable {
+struct DownsizedSmall: Codable, Equatable {
     let width, height: String?
     let mp4: String?
     let mp4Size: String?
@@ -102,7 +102,7 @@ struct DownsizedSmall: Codable {
 }
 
 // MARK: - FixedHeight
-struct FixedHeight: Codable {
+struct FixedHeight: Codable, Equatable {
     let url: String?
     let width, height, size: String?
     let mp4: String?
@@ -120,7 +120,7 @@ struct FixedHeight: Codable {
 }
 
 // MARK: - Looping
-struct Looping: Codable {
+struct Looping: Codable, Equatable {
     let mp4: String?
     let mp4Size: String?
     
@@ -131,7 +131,7 @@ struct Looping: Codable {
 }
 
 // MARK: - Meta
-struct Meta: Codable {
+struct Meta: Codable, Equatable {
     let status: Int?
     let msg, responseID: String?
     
@@ -142,9 +142,9 @@ struct Meta: Codable {
 }
 
 // MARK: - Pagination
-struct Pagination: Codable {
+struct Pagination: Codable, Equatable {
     let totalCount, count, offset: Int?
-    
+
     enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
         case count, offset

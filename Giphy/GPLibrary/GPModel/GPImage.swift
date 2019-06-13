@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GPImage: Codable {
+struct GPImage: Codable, Equatable {
     let type, id, slug: String?
     let url, bitlyGIFURL, bitlyURL, embedURL: String?
     let username: String?

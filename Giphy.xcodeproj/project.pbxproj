@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51C10BC22B29021002107BA /* GPSearchViewControllerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C10BB22B29021002107BA /* GPSearchViewControllerModelTests.swift */; };
 		D552039C22A8F6DA00E356F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552039B22A8F6DA00E356F1 /* AppDelegate.swift */; };
 		D552039E22A8F6DA00E356F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D552039D22A8F6DA00E356F1 /* ViewController.swift */; };
 		D55203A122A8F6DA00E356F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D552039F22A8F6DA00E356F1 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D51C10BB22B29021002107BA /* GPSearchViewControllerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerModelTests.swift; sourceTree = "<group>"; };
 		D552039822A8F6DA00E356F1 /* Giphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D552039B22A8F6DA00E356F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D552039D22A8F6DA00E356F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D5118F2D22B29B9E00A9071B /* ViewTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewTests;
+			sourceTree = "<group>";
+		};
+		D5118F2E22B29BA600A9071B /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		D5118F2F22B29BB000A9071B /* ProtocolTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProtocolTests;
+			sourceTree = "<group>";
+		};
+		D5118F3022B29BB900A9071B /* ServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceTests;
+			sourceTree = "<group>";
+		};
 		D552038F22A8F6DA00E356F1 = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +337,14 @@
 			path = GPView;
 			sourceTree = "<group>";
 		};
+		D591A00F22B28F4600816F02 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				D51C10BB22B29021002107BA /* GPSearchViewControllerModelTests.swift */,
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
 		D5D277AD22AE29F200465008 /* GPAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +378,11 @@
 		D5D277D322AE9DCA00465008 /* GiphyTests */ = {
 			isa = PBXGroup;
 			children = (
+				D5118F3022B29BB900A9071B /* ServiceTests */,
+				D5118F2F22B29BB000A9071B /* ProtocolTests */,
+				D5118F2E22B29BA600A9071B /* ViewModelTests */,
+				D5118F2D22B29B9E00A9071B /* ViewTests */,
+				D591A00F22B28F4600816F02 /* ModelTests */,
 				D5D277EA22AEB79D00465008 /* ClassTests */,
 				D5D277D422AE9DCA00465008 /* GiphyTests.swift */,
 				D5D277D622AE9DCA00465008 /* Info.plist */,
@@ -533,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D277D522AE9DCA00465008 /* GiphyTests.swift in Sources */,
+				D51C10BC22B29021002107BA /* GPSearchViewControllerModelTests.swift in Sources */,
 				D5D277EC22AEB7C800465008 /* GPAppDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
