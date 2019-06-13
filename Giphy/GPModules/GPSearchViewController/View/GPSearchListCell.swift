@@ -14,12 +14,10 @@ class GPSearchListCell : GPTableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        addSubview(nameLabel)
+        backgroundColor = .black
+        separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+
         addSubview(profileImageView)
-        addSubview(favouriteButton)
-        
-        favouriteButton.addTarget(self, action: #selector(favouriteAction), for: .touchUpInside)
         self.setupConstraints()
     }
     
@@ -44,9 +42,6 @@ class GPSearchListCell : GPTableViewCell {
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 20
-        imageView.layer.borderColor = UIColor.init(white: 0.96, alpha: 1).cgColor
-        imageView.layer.borderWidth = 1
         imageView.image = UIImage(named: "placeholder_photo")
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
@@ -80,10 +75,7 @@ class GPSearchListCell : GPTableViewCell {
         if (isUpdatedConstraints == false) {
             isUpdatedConstraints = true
             
-            addConstraintsWithFormat("H:|-16-[v0(40)]-16-[v1][v2(40)]-32-|", views: profileImageView, nameLabel, favouriteButton)
-            
-            addConstraintsWithFormat("V:|-12-[v0(40)]", views: profileImageView)
-            addConstraintsWithFormat("V:|-24-[v0(16)]", views: nameLabel)
-            addConstraintsWithFormat("V:|-12-[v0(40)]", views: favouriteButton)
+            addConstraintsWithFormat("H:|-6-[v0]-6-|", views: profileImageView)
+            addConstraintsWithFormat("V:|-3-[v0(200)]", views: profileImageView)
         }
     }}

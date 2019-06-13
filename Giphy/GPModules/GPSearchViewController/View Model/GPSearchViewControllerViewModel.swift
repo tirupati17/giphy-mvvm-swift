@@ -51,14 +51,14 @@ class GPSearchViewControllerViewModel {
     }
     
     var rowHeight: CGFloat {
-        return 64
+        return 206
     }
     
     var numberOfSection: Int = 1
     var numberOfRows = 0
 
     /// for pagination
-    private var searchLimit: String = "10"
+    private var searchLimit: String = "5"
     private var isLazyLoading: Bool = false
     private var searchOffset: String {
         return "\(self.viewModelCount)"
@@ -104,7 +104,7 @@ class GPSearchViewControllerViewModel {
     // MARK: closure observe by view-model
     var viewModelAtIndex: ((IndexPath)-> GPImage?)?
     var imageSelected: (GPImage)->() = { _ in }
-    var didGetData: ((_ query : String, _ isLazyLoading : Bool) -> ())?
+    var didGetData: ((_ query : String, _ isLazyLoading : Bool) -> ()) = {_,_ in }
 
     init(withGPSearchViewController serviceProtocol: GPSearchViewControllerServiceProtocol = GPSearchViewControllerService() ) {
         self.service = serviceProtocol
@@ -122,10 +122,14 @@ class GPSearchViewControllerViewModel {
         
         // seach image based on query
         didGetData = { query, isLazyLoading in
-            self.isLazyLoading = isLazyLoading
-            self.bindSearchImage(query: query, completion: { [weak self] in
-                self?.reloadTable()
-            })
+            if !query.isEmpty {
+                self.isLazyLoading = isLazyLoading
+                self.isLoading = true
+                self.bindSearchImage(query: query, completion: { [weak self] in
+                    self?.isLoading = false
+                    self?.reloadTable()
+                })
+            }
         }
         
         //navigate to detail page via view

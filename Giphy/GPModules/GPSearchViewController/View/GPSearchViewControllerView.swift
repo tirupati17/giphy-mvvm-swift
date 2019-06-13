@@ -11,6 +11,13 @@ import UIKit
 let searchViewControllerViewCellId = "GPSearchViewControllerViewCellId"
 
 class GPSearchViewControllerView: GPTableViewController {
+    let searchController = UISearchController(searchResultsController: nil)
+    var searchText : String = "" {
+        didSet {
+            self.viewModel.didGetData(searchText, false)
+        }
+    }
+    
     private var viewModel = GPSearchViewControllerViewModel()
     override func loadView() {
         super.loadView()
@@ -19,24 +26,28 @@ class GPSearchViewControllerView: GPTableViewController {
     
     /// Prepare the table view.
     private func prepareTableView() {
+        tableView.backgroundColor = .black
         tableView.register(GPSearchListCell.self, forCellReuseIdentifier: searchViewControllerViewCellId)
         tableView.refreshControl = self.refreshControl
-        
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        
-        tableView.tableHeaderView = searchController.searchBar
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchController.searchBar.delegate = self //Disable it for search press based result
+        //searchController.searchResultsUpdater = self //Enable it for quick result
+        searchController.dimsBackgroundDuringPresentation = false
+        
+        tableView.tableHeaderView = searchController.searchBar
+        tableView.separatorColor = UIColor.clear
+
+        self.navigationItem.title = "GIPHY"
+
         self.observeViewModel()
     }
     
     override func handleRefresh(_ refreshControl: UIRefreshControl) {
-
+        self.viewModel.didGetData(searchText, false)
     }
     
     // Observe event from view-model
@@ -65,19 +76,32 @@ class GPSearchViewControllerView: GPTableViewController {
         }
         
         self.viewModel.reloadTable = { [weak self] in
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-                self?.navigationItem.title = "\(String(describing: self?.viewModel.viewModelCount)) results out of \(String(describing: self?.viewModel.totalCount))"
+            DispatchQueue.main.async { [weak self] in
+                guard let strongSelf = self else { return } //as self is weak so chances are it can be nil
+                strongSelf.tableView.reloadData()
+                if strongSelf.viewModel.viewModelCount > 0 && strongSelf.viewModel.totalCount > 0 {
+                    strongSelf.navigationItem.title = "\(String(describing: strongSelf.viewModel.viewModelCount)) results out of \(String(describing: strongSelf.viewModel.totalCount))"
+                } else {
+                    strongSelf.navigationItem.title = "Giphy"
+                }
             }
-            self?.stopViewAnimation()
+        }
+    }
+}
+
+extension GPSearchViewControllerView : UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let text = searchBar.text, !text.isEmpty {
+            self.searchText = text
+            self.searchController.dismiss(animated: true, completion: nil)
         }
     }
 }
 
 extension GPSearchViewControllerView : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        if let text = searchController.searchBar.text, let didGetData = self.viewModel.didGetData {
-            didGetData(text, false)
+        if let text = searchController.searchBar.text, !text.isEmpty {
+            self.searchText = text
         }
     }
 }
@@ -123,6 +147,15 @@ extension GPSearchViewControllerView {
         }
         return GPSearchListCell.init(style: .default, reuseIdentifier: searchViewControllerViewCellId)
     }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if self.viewModel.viewModelCount == (indexPath.row + 1) {
+            if self.viewModel.viewModelCount < self.viewModel.totalCount {
+                self.viewModel.didGetData(self.searchText, true) //load more images
+            }
+        }
+    }
+
 }
 
 

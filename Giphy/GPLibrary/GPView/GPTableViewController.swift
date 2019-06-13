@@ -16,10 +16,10 @@ class GPTableViewController : UITableViewController {
         super.viewDidLoad()
         
         self.activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(activityIndicatorView)
+        tableView.backgroundView = activityIndicatorView
         
-        self.activityIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        self.activityIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        //self.activityIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        //self.activityIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
