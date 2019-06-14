@@ -122,14 +122,12 @@ class GPSearchViewControllerViewModel {
         
         // seach image based on query
         didGetData = { query, isLazyLoading in
-            if !query.isEmpty {
-                self.isLazyLoading = isLazyLoading
-                self.isLoading = true
-                self.bindSearchImage(query: query, completion: { [weak self] in
-                    self?.isLoading = false
-                    self?.reloadTable()
-                })
-            }
+            self.isLazyLoading = isLazyLoading
+            self.isLoading = true
+            self.bindSearchImage(query: query, completion: { [weak self] in
+                self?.isLoading = false
+                self?.reloadTable()
+            })
         }
         
         //navigate to detail page or perform some action via view
@@ -166,11 +164,20 @@ class GPSearchViewControllerViewModel {
                 self.isDisconnected = true
                 self.internetConnectionStatus?()
             case .online:
-                self.service.searchImage(query, limit: self.searchLimit, offset: self.searchOffset, success: { (model) in
-                    self.model = model
-                    completion()
-                }) { (error) in
-                    self.serverErrorStatus?(error)
+                if query.isEmpty { //load trending gif
+                    self.service.trendingImage(self.searchLimit, offset: self.searchOffset, success: { (model) in
+                        self.model = model
+                        completion()
+                    }) { (error) in
+                        self.serverErrorStatus?(error)
+                    }
+                } else {
+                    self.service.searchImage(query, limit: self.searchLimit, offset: self.searchOffset, success: { (model) in
+                        self.model = model
+                        completion()
+                    }) { (error) in
+                        self.serverErrorStatus?(error)
+                    }
                 }
                 break
             default:

@@ -20,4 +20,16 @@ extension GPAPIRequest {
                                         success : success,
                                         failure : failure)
     }
+    
+    class func trendingImage(_ limit : String, offset : String, success : ((JSON) -> ())?, failure : ((Error) -> ())?) {
+        let apiRequest = GPAPIRequest.init(requestType: GPAPIRequestType.APIRequestSearch)
+        let urlString = GPAPIStringUrl.trendingEndpoint(GPConstant.GiphyApiKey, limit: limit, offset: offset)
+        
+        apiRequest.requestWithUrlString(urlString,
+                                        requestMethod: GPRequestMethod.RequestMethodGet,
+                                        params: [:],
+                                        data : nil,
+                                        success : success,
+                                        failure : failure)
+    }
 }

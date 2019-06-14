@@ -21,4 +21,17 @@ class GPSearchViewControllerService: GPSearchViewControllerServiceProtocol {
             failure(error)
         }
     }
+    
+    func trendingImage(_ limit: String, offset: String, success: @escaping (GPSearchViewControllerModel) -> (), failure: @escaping (Error) -> ()) {
+        GPAPIRequest.trendingImage(limit, offset: offset, success: { (response) in
+            if let response = response as? GPSearchViewControllerModel {
+                success(response)
+            } else {
+                failure(GPError.customError(message: "Invalid model"))
+            }
+        }) { (error) in
+            failure(error)
+        }
+    }
+
 }

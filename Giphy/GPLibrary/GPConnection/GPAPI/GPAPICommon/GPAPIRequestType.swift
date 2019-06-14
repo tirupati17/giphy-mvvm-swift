@@ -10,5 +10,6 @@ import Foundation
 
 enum GPAPIRequestType: Int {
     case APIRequestSearch = 1
+    case APIRequestTrending = 2
     case APIRequestUndefined = 100
 }

@@ -13,9 +13,11 @@ let searchViewControllerViewCellId = "GPSearchViewControllerViewCellId"
 
 class GPSearchViewControllerView: GPTableViewController {
     let searchController = UISearchController(searchResultsController: nil)
-    var searchText : String = "" {
+    var searchText : String? {
         didSet {
-            self.viewModel.didGetData(searchText, false)
+            if let text = self.searchText {
+                self.viewModel.didGetData(text, false) //false means lazy loading disable
+            }
         }
     }
     
@@ -43,15 +45,18 @@ class GPSearchViewControllerView: GPTableViewController {
         
         self.navigationItem.titleView = searchController.searchBar
         self.observeViewModel()
+        
+        self.searchText = "" //load trending gif
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        searchController.searchBar.becomeFirstResponder()
     }
     
     override func handleRefresh(_ refreshControl: UIRefreshControl) {
-        self.viewModel.didGetData(searchText, false)
+        if let text = self.searchText {
+            self.searchText = text
+        }
     }
     
     // Observe event from view-model
@@ -98,6 +103,14 @@ class GPSearchViewControllerView: GPTableViewController {
                 guard let strongSelf = self else { return } //as self is weak so chances are it can be nil
                 strongSelf.tableView.reloadData()
             }
+        }
+    }
+}
+
+extension GPSearchViewControllerView : UISearchControllerDelegate {
+    func didPresentSearchController(_ searchController: UISearchController) {
+        DispatchQueue.main.async {[weak self] in
+            self?.searchController.searchBar.becomeFirstResponder()
         }
     }
 }
@@ -177,7 +190,9 @@ extension GPSearchViewControllerView {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if self.viewModel.viewModelCount == (indexPath.row + 1) {
             if self.viewModel.viewModelCount < self.viewModel.totalCount {
-                self.viewModel.didGetData(self.searchText, true) //load more images
+                if let text = self.searchText {
+                    self.viewModel.didGetData(text, true) //true means lazy loading enable
+                }
             }
         }
     }
