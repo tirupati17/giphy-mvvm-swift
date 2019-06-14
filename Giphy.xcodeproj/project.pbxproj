@@ -46,6 +46,7 @@
 		D5D277EC22AEB7C800465008 /* GPAppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277EB22AEB7C800465008 /* GPAppDelegateTests.swift */; };
 		D5EF2CC322B3861400C6142A /* GPSearchViewControllerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF2CC222B3861400C6142A /* GPSearchViewControllerViewModelTests.swift */; };
 		D5EF2CC522B3864900C6142A /* MockGPSearchViewControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF2CC422B3864900C6142A /* MockGPSearchViewControllerService.swift */; };
+		D5EF2CC722B396A600C6142A /* GPSearchViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF2CC622B396A600C6142A /* GPSearchViewControllerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		D5D277EB22AEB7C800465008 /* GPAppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAppDelegateTests.swift; sourceTree = "<group>"; };
 		D5EF2CC222B3861400C6142A /* GPSearchViewControllerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerViewModelTests.swift; sourceTree = "<group>"; };
 		D5EF2CC422B3864900C6142A /* MockGPSearchViewControllerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGPSearchViewControllerService.swift; sourceTree = "<group>"; };
+		D5EF2CC622B396A600C6142A /* GPSearchViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		D5118F2D22B29B9E00A9071B /* ViewTests */ = {
 			isa = PBXGroup;
 			children = (
+				D5EF2CC622B396A600C6142A /* GPSearchViewControllerView.swift */,
 			);
 			path = ViewTests;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 			files = (
 				D5EF2CC322B3861400C6142A /* GPSearchViewControllerViewModelTests.swift in Sources */,
 				D5D277D522AE9DCA00465008 /* GiphyTests.swift in Sources */,
+				D5EF2CC722B396A600C6142A /* GPSearchViewControllerView.swift in Sources */,
 				D51C10BC22B29021002107BA /* GPSearchViewControllerModelTests.swift in Sources */,
 				D5EF2CC522B3864900C6142A /* MockGPSearchViewControllerService.swift in Sources */,
 				D5D277EC22AEB7C800465008 /* GPAppDelegateTests.swift in Sources */,

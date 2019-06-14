@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 let searchViewControllerViewCellId = "GPSearchViewControllerViewCellId"
 
@@ -29,6 +30,7 @@ class GPSearchViewControllerView: GPTableViewController {
         tableView.backgroundColor = .black
         tableView.register(GPSearchListCell.self, forCellReuseIdentifier: searchViewControllerViewCellId)
         tableView.refreshControl = self.refreshControl
+        tableView.separatorColor = UIColor.clear
     }
     
     override func viewDidLoad() {
@@ -39,10 +41,9 @@ class GPSearchViewControllerView: GPTableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         
         tableView.tableHeaderView = searchController.searchBar
-        tableView.separatorColor = UIColor.clear
-
-        self.navigationItem.title = "GIPHY"
-
+        searchController.searchBar.becomeFirstResponder()
+        
+        self.navigationItem.titleView = UIImageView.init(image: UIImage(named: "nav_icon"))
         self.observeViewModel()
     }
     
@@ -52,6 +53,15 @@ class GPSearchViewControllerView: GPTableViewController {
     
     // Observe event from view-model
     fileprivate func observeViewModel() {
+        
+        self.viewModel.showActivityView = { [weak self] (items) in
+            guard let strongSelf = self else { return }
+            DispatchQueue.main.async {
+                let activityVc = UIActivityViewController(activityItems: items, applicationActivities: nil)
+                activityVc.popoverPresentationController?.sourceView = strongSelf.view
+                strongSelf.present(activityVc, animated: true, completion: nil)
+            }
+        }
         
         self.viewModel.showAlertClosure = {
             if let alert = self.viewModel.alertMessage {
@@ -79,11 +89,6 @@ class GPSearchViewControllerView: GPTableViewController {
             DispatchQueue.main.async { [weak self] in
                 guard let strongSelf = self else { return } //as self is weak so chances are it can be nil
                 strongSelf.tableView.reloadData()
-                if strongSelf.viewModel.viewModelCount > 0 && strongSelf.viewModel.totalCount > 0 {
-                    strongSelf.navigationItem.title = "\(String(describing: strongSelf.viewModel.viewModelCount)) results out of \(String(describing: strongSelf.viewModel.totalCount))"
-                } else {
-                    strongSelf.navigationItem.title = "Giphy"
-                }
             }
         }
     }
@@ -127,6 +132,19 @@ extension GPSearchViewControllerView {
 
 extension GPSearchViewControllerView {
     
+    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        if let header = view as? UITableViewHeaderFooterView {
+            header.textLabel?.textColor = UIColor.white
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if self.viewModel.viewModelCount > 0 && self.viewModel.totalCount > 0 {
+            return "\(String(describing: self.viewModel.viewModelCount)) results out of \(String(describing: self.viewModel.totalCount))"
+        }
+        return ""
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel.viewModelCount
     }

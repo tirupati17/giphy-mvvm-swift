@@ -98,13 +98,14 @@ class GPSearchViewControllerViewModel {
     var updateLoadingStatus: (() -> ())?
     var internetConnectionStatus: (() -> ())?
     var serverErrorStatus: ((Error) -> ())?
-    
+    var showActivityView: ([Any])->() = { _ in }
+
     // MARK: closure observe by view-model (Should not be nil after view-model initialization)
     var viewDidLoad: ()->() = {}
     var didGetData: ((_ query : String, _ isLazyLoading : Bool) -> ()) = {_,_ in }
-    var imageSelected: (GPImage)->() = { _ in }
+    var imageSelected: ((GPImage)-> ()) = { _ in }
     var viewModelAtIndex: ((IndexPath)-> GPImage?)?
-
+    
     init(withGPSearchViewController serviceProtocol: GPSearchViewControllerServiceProtocol = GPSearchViewControllerService() ) {
         self.service = serviceProtocol
 
@@ -131,9 +132,21 @@ class GPSearchViewControllerViewModel {
             }
         }
         
-        //navigate to detail page via view
-        imageSelected = { image in
-            
+        //navigate to detail page or perform some action via view
+        imageSelected = { gpImage in
+            DispatchQueue.global(qos: .userInteractive).async {
+                var items: [Any] = []
+                if let images = gpImage.images {
+                    if let downsizedMedium = images.downsizedMedium {
+                        if let shareUrl = downsizedMedium.url {
+                            if let url = URL(string: shareUrl) {
+                                items.append(NSData(contentsOf: url) as Any)
+                                self.showActivityView(items)
+                            }
+                        }
+                    }
+                }
+            }
         }
         
         viewModelAtIndex = { indexPath in
