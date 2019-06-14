@@ -11,7 +11,7 @@ import XCTest
 
 @testable import Giphy
 
-class GPImageTests : XCTestCase {
+class GPSearchViewControllerModelTests : XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,8 +21,12 @@ class GPImageTests : XCTestCase {
         super.tearDown()
     }
     
+    func returnGPSearchViewControllerModel() -> GPSearchViewControllerModel {
+        return GPSearchViewControllerModel(gpImages: [self.testGPImageAttributes()], pagination: self.testPaginationAttributes(), meta: self.testMetaAttributes())
+    }
+    
     func testGPSearchViewControllerModelAttributes() {
-        let model = GPSearchViewControllerModel(gpImages: [self.testGPImageAttributes()], pagination: self.testPaginationAttributes(), meta: self.testMetaAttributes())
+        let model = self.returnGPSearchViewControllerModel()
         XCTAssertEqual(model.gpImages, [self.testGPImageAttributes()])
         XCTAssertEqual(model.pagination, self.testPaginationAttributes())
         XCTAssertEqual(model.meta, self.testMetaAttributes())

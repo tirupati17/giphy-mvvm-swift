@@ -55,7 +55,6 @@ class GPSearchViewControllerViewModel {
     }
     
     var numberOfSection: Int = 1
-    var numberOfRows = 0
 
     /// for pagination
     private var searchLimit: String = "5"
@@ -93,18 +92,18 @@ class GPSearchViewControllerViewModel {
         }
     }
 
-    // MARK: closure observe by view
+    // MARK: closure observe by view (Should not be nil after view initialization)
     var reloadTable: ()->() = {}
-    var viewDidLoad: ()->() = {}
     var showAlertClosure: (() -> ())?
     var updateLoadingStatus: (() -> ())?
     var internetConnectionStatus: (() -> ())?
     var serverErrorStatus: ((Error) -> ())?
     
-    // MARK: closure observe by view-model
-    var viewModelAtIndex: ((IndexPath)-> GPImage?)?
-    var imageSelected: (GPImage)->() = { _ in }
+    // MARK: closure observe by view-model (Should not be nil after view-model initialization)
+    var viewDidLoad: ()->() = {}
     var didGetData: ((_ query : String, _ isLazyLoading : Bool) -> ()) = {_,_ in }
+    var imageSelected: (GPImage)->() = { _ in }
+    var viewModelAtIndex: ((IndexPath)-> GPImage?)?
 
     init(withGPSearchViewController serviceProtocol: GPSearchViewControllerServiceProtocol = GPSearchViewControllerService() ) {
         self.service = serviceProtocol

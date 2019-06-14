@@ -44,6 +44,8 @@
 		D5D277D522AE9DCA00465008 /* GiphyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277D422AE9DCA00465008 /* GiphyTests.swift */; };
 		D5D277E322AE9DE000465008 /* GiphyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277E222AE9DE000465008 /* GiphyUITests.swift */; };
 		D5D277EC22AEB7C800465008 /* GPAppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D277EB22AEB7C800465008 /* GPAppDelegateTests.swift */; };
+		D5EF2CC322B3861400C6142A /* GPSearchViewControllerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF2CC222B3861400C6142A /* GPSearchViewControllerViewModelTests.swift */; };
+		D5EF2CC522B3864900C6142A /* MockGPSearchViewControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF2CC422B3864900C6142A /* MockGPSearchViewControllerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		D5D277E222AE9DE000465008 /* GiphyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyUITests.swift; sourceTree = "<group>"; };
 		D5D277E422AE9DE000465008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5D277EB22AEB7C800465008 /* GPAppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAppDelegateTests.swift; sourceTree = "<group>"; };
+		D5EF2CC222B3861400C6142A /* GPSearchViewControllerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerViewModelTests.swift; sourceTree = "<group>"; };
+		D5EF2CC422B3864900C6142A /* MockGPSearchViewControllerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGPSearchViewControllerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 		D5118F2E22B29BA600A9071B /* ViewModelTests */ = {
 			isa = PBXGroup;
 			children = (
+				D5EF2CC222B3861400C6142A /* GPSearchViewControllerViewModelTests.swift */,
+				D5EF2CC422B3864900C6142A /* MockGPSearchViewControllerService.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -337,14 +343,6 @@
 			path = GPView;
 			sourceTree = "<group>";
 		};
-		D591A00F22B28F4600816F02 /* ModelTests */ = {
-			isa = PBXGroup;
-			children = (
-				D51C10BB22B29021002107BA /* GPSearchViewControllerModelTests.swift */,
-			);
-			path = ModelTests;
-			sourceTree = "<group>";
-		};
 		D5D277AD22AE29F200465008 /* GPAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,11 +376,11 @@
 		D5D277D322AE9DCA00465008 /* GiphyTests */ = {
 			isa = PBXGroup;
 			children = (
+				D5EF2CC122B385FE00C6142A /* ModelTests */,
 				D5118F3022B29BB900A9071B /* ServiceTests */,
 				D5118F2F22B29BB000A9071B /* ProtocolTests */,
 				D5118F2E22B29BA600A9071B /* ViewModelTests */,
 				D5118F2D22B29B9E00A9071B /* ViewTests */,
-				D591A00F22B28F4600816F02 /* ModelTests */,
 				D5D277EA22AEB79D00465008 /* ClassTests */,
 				D5D277D422AE9DCA00465008 /* GiphyTests.swift */,
 				D5D277D622AE9DCA00465008 /* Info.plist */,
@@ -405,6 +403,14 @@
 				D5D277EB22AEB7C800465008 /* GPAppDelegateTests.swift */,
 			);
 			path = ClassTests;
+			sourceTree = "<group>";
+		};
+		D5EF2CC122B385FE00C6142A /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				D51C10BB22B29021002107BA /* GPSearchViewControllerModelTests.swift */,
+			);
+			path = ModelTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -575,8 +581,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5EF2CC322B3861400C6142A /* GPSearchViewControllerViewModelTests.swift in Sources */,
 				D5D277D522AE9DCA00465008 /* GiphyTests.swift in Sources */,
 				D51C10BC22B29021002107BA /* GPSearchViewControllerModelTests.swift in Sources */,
+				D5EF2CC522B3864900C6142A /* MockGPSearchViewControllerService.swift in Sources */,
 				D5D277EC22AEB7C800465008 /* GPAppDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
