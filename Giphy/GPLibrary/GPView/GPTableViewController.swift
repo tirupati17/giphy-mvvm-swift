@@ -11,15 +11,20 @@ import Foundation
 class GPTableViewController : UITableViewController {
     
     var activityIndicatorView = UIActivityIndicatorView(style: .gray)
+    lazy var tableViewRefreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.handleRefresh(_:)), for: UIControl.Event.valueChanged)
+        return refreshControl
+    }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundView = activityIndicatorView
+        tableView.backgroundView = self.activityIndicatorView
         
-        //self.activityIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        //self.activityIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        self.activityIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        self.activityIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

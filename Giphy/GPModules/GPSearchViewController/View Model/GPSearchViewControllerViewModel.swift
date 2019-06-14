@@ -27,7 +27,7 @@ class GPSearchViewControllerViewModel {
         }
     }
 
-    /// datasource
+    ///MARK: -- Model Datasource
     var viewModelCount: Int {
         return self.gpImages.count
     }
@@ -56,7 +56,7 @@ class GPSearchViewControllerViewModel {
     
     var numberOfSection: Int = 1
 
-    /// for pagination
+    ///MARK: -- Pagination
     private var searchLimit: String = "5"
     private var isLazyLoading: Bool = false
     private var searchOffset: String {

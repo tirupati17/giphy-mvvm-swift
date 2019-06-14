@@ -29,22 +29,25 @@ class GPSearchViewControllerView: GPTableViewController {
     private func prepareTableView() {
         tableView.backgroundColor = .black
         tableView.register(GPSearchListCell.self, forCellReuseIdentifier: searchViewControllerViewCellId)
-        tableView.refreshControl = self.refreshControl
+        tableView.refreshControl = self.tableViewRefreshControl
         tableView.separatorColor = UIColor.clear
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchController.searchBar.delegate = self //Disable it for search press based result
-        //searchController.searchResultsUpdater = self //Enable it for quick result
+        searchController.searchBar.delegate = self
+        searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
         
-        tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.becomeFirstResponder()
-        
-        self.navigationItem.titleView = UIImageView.init(image: UIImage(named: "nav_icon"))
+        self.navigationItem.titleView = searchController.searchBar
         self.observeViewModel()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        searchController.searchBar.becomeFirstResponder()
     }
     
     override func handleRefresh(_ refreshControl: UIRefreshControl) {
@@ -70,10 +73,15 @@ class GPSearchViewControllerView: GPTableViewController {
         }
         
         self.viewModel.updateLoadingStatus = {
-            if self.viewModel.isLoading {
-                self.startViewAnimation()
-            } else {
-                self.stopViewAnimation()
+            DispatchQueue.main.async {
+                if self.viewModel.isLoading {
+                    UIApplication.showNetworkActivity()
+                    self.startViewAnimation()
+                } else {
+                    self.tableViewRefreshControl.endRefreshing()
+                    UIApplication.hideNetworkActivity()
+                    self.stopViewAnimation()
+                }
             }
         }
 
@@ -132,17 +140,17 @@ extension GPSearchViewControllerView {
 
 extension GPSearchViewControllerView {
     
-    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let header = view as? UITableViewHeaderFooterView {
             header.textLabel?.textColor = UIColor.white
         }
     }
     
-    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if self.viewModel.viewModelCount > 0 && self.viewModel.totalCount > 0 {
             return "\(String(describing: self.viewModel.viewModelCount)) results out of \(String(describing: self.viewModel.totalCount))"
         }
-        return ""
+        return nil
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
