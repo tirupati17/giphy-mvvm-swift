@@ -17,7 +17,7 @@ class GPSearchViewControllerViewTests : XCTestCase {
 
     override func setUp() {
         super.setUp()
-        self.searchViewControllerView = GPSearchViewControllerView(style: .plain)
+        self.searchViewControllerView = GPSearchViewControllerView()
         XCTAssertNotNil(self.searchViewControllerView.searchController)
 
         self.searchViewControllerView.loadView()

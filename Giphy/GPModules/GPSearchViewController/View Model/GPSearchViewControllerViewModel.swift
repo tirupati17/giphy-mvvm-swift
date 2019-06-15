@@ -57,7 +57,7 @@ class GPSearchViewControllerViewModel {
     var numberOfSection: Int = 1
 
     ///MARK: -- Pagination
-    private var searchLimit: String = "5"
+    private var searchLimit: String = "20"
     private var isLazyLoading: Bool = false
     private var searchOffset: String {
         return "\(self.viewModelCount)"

@@ -8,15 +8,14 @@
 
 import Foundation
 
-class GPSearchListCell : GPTableViewCell {
+class GPSearchListCell : GPCollectionViewCell {
     var controller: GPSearchViewControllerView?
     var isUpdatedConstraints: Bool? = false
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
         backgroundColor = .black
-        separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-
         addSubview(profileImageView)
         self.setupConstraints()
     }

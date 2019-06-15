@@ -47,6 +47,7 @@
 		D5EF2CC322B3861400C6142A /* GPSearchViewControllerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF2CC222B3861400C6142A /* GPSearchViewControllerViewModelTests.swift */; };
 		D5EF2CC522B3864900C6142A /* MockGPSearchViewControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF2CC422B3864900C6142A /* MockGPSearchViewControllerService.swift */; };
 		D5EF2CC722B396A600C6142A /* GPSearchViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF2CC622B396A600C6142A /* GPSearchViewControllerView.swift */; };
+		D5EF2CC922B5020300C6142A /* GPCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF2CC822B5020300C6142A /* GPCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		D5EF2CC222B3861400C6142A /* GPSearchViewControllerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerViewModelTests.swift; sourceTree = "<group>"; };
 		D5EF2CC422B3864900C6142A /* MockGPSearchViewControllerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGPSearchViewControllerService.swift; sourceTree = "<group>"; };
 		D5EF2CC622B396A600C6142A /* GPSearchViewControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSearchViewControllerView.swift; sourceTree = "<group>"; };
+		D5EF2CC822B5020300C6142A /* GPCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +344,7 @@
 				D59098D122AD4B3900839E69 /* GPViewController.swift */,
 				D59098D322AD4B4800839E69 /* GPTableViewController.swift */,
 				D59098D522AD4B5D00839E69 /* GPTableViewCell.swift */,
+				D5EF2CC822B5020300C6142A /* GPCollectionViewCell.swift */,
 			);
 			path = GPView;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 			files = (
 				D5D277CD22AE642400465008 /* UIImageView+Extensions.swift in Sources */,
 				D5D277B922AE2C9A00465008 /* GPConstant.swift in Sources */,
+				D5EF2CC922B5020300C6142A /* GPCollectionViewCell.swift in Sources */,
 				D55203BD22A8FF5000E356F1 /* GPSearchViewControllerView.swift in Sources */,
 				D59098CC22AD459100839E69 /* GPError.swift in Sources */,
 				D5D277B722AE2B4100465008 /* GPAPIStringUrl.swift in Sources */,

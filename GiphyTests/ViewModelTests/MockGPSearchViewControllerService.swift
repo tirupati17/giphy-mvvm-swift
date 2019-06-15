@@ -12,6 +12,7 @@ import XCTest
 @testable import Giphy
 
 class MockGPSearchViewControllerService : GPSearchViewControllerServiceProtocol {
+    
     var searchViewControllerModel : GPSearchViewControllerModel!
     
     init() {
@@ -22,4 +23,8 @@ class MockGPSearchViewControllerService : GPSearchViewControllerServiceProtocol 
         success(self.searchViewControllerModel)
     }
     
+    func trendingImage(_ limit: String, offset: String, success: @escaping (GPSearchViewControllerModel) -> (), failure: @escaping (Error) -> ()) {
+        success(self.searchViewControllerModel)
+    }
+
 }
