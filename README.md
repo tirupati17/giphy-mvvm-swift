@@ -1,7 +1,7 @@
-# Whitespectre - Giphy(Search and display gifs) - MVVM
+# Giphy(Search and display gifs) - MVVM
 
 ### Description
-*Giphy* is an iOS app assignment given by Whitespectre to Tirupati Balan which is based on __MVVM (Model–view–viewmodel)__ software architectural pattern.
+*Giphy* is an iOS app based on __MVVM (Model–view–viewmodel)__ software architectural pattern.
 
 ### Run Requirements
 
