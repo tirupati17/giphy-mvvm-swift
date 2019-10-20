@@ -61,6 +61,7 @@ class GPSearchViewControllerView: GPViewController {
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.searchTextField.textColor = UIColor.white
         
         self.navigationItem.titleView = searchController.searchBar
         self.observeViewModel()

@@ -12,13 +12,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        let vc = GPSearchViewControllerView()
-        let nv = UINavigationController.init(rootViewController: vc)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.present(nv, animated: true, completion: nil)
-        }
+        self.perform(#selector(showMainView), with: nil, afterDelay: 0.1)
+    }
+    
+    @objc func showMainView() {
+        UIApplication.shared.delegate?.window??.rootViewController = UINavigationController.init(rootViewController: GPSearchViewControllerView())
     }
 
 }
